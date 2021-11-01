@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <Layout title_prefix={title_prefix}>
-        <h1>aaa</h1>
+        <h1>link</h1>
       </Layout>
     </div>
   );
