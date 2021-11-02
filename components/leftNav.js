@@ -4,7 +4,17 @@ import styles from "../styles/leftNav.module.css";
 export default function LeftNav(props) {
   return (
     <div>
-      <div className="flex sticky top-0 mx-12">
+      {/* スマホのためのメニュー開閉 */}
+
+      <input
+        type="checkbox"
+        id="menu_opener"
+        className={styles.nav_button_hidden}
+      />
+      <label className={styles.nav_button} htmlFor="menu_opener"></label>
+
+      {/* メニュー */}
+      <div className={styles.portfolio_menu}>
         <div className={styles.leftNav_line}></div>
         <nav className="flex flex-col text-xl text-u_c_5 mt-4">
           <Link href="/">

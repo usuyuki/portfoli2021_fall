@@ -11,7 +11,8 @@ export default function Layout(props) {
     <div>
       <Head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
         <meta name="description" content="{うすゆきのポートフォリオです。}" />
         <title>{props.title_prefix} | うすゆきポートフォリオ</title>
@@ -53,7 +54,7 @@ export default function Layout(props) {
         />
       </Head>
 
-      <div className="flex md:justify-center">
+      <div className="flex md:justify-center overflow-hidden relative">
         <LeftNav />
         <div>
           <Header pageTitle={props.pageTitle} />
