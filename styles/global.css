@@ -99,8 +99,7 @@ body {
 }
 
 main {
-  min-width: 1400px;
-  max-width: 1700px;
+  width: calc(90vw - 200px);
   /* navが192px */
   min-height: calc(100vh - 140px);
 }
@@ -119,6 +118,25 @@ a:hover {
   transition: 0.5s;
 }
 
+.top-image {
+  width: 150px;
+  height: 150px;
+  /* サイズ揃える */
+  object-fit: cover;
+  border-radius: 40% 70% 50% 30%/50%;
+  filter: grayscale(100%);
+}
+.top-image:hover {
+  filter: grayscale(0%);
+  transition: 0.5s;
+}
+
+.genre-tag {
+  background-color: var(--u_c_1);
+  color: var(--usuyuki_black);
+  border-radius: 4px;
+  padding: 0.25em 0.5em;
+}
 @media screen and (max-width: 599px) {
   /* スマホ */
   main {
