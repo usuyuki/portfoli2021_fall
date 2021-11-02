@@ -1,0 +1,148 @@
+/**
+ * /* 色定義
+ *
+ * @format
+ */
+
+:root {
+  --usuyuki_white: #f4f5f7;
+  --usuyuki_black: #333333;
+  --u_c_1: #d9cd47;
+  --u_c_2: #f2ee93;
+  --u_c_3: #e7f2f6;
+  --u_c_4: #9cd9d4;
+  --u_c_5: #126c6d;
+}
+
+.bg-usuyuki_white {
+  background-color: var(--usuyuki_white);
+}
+.text-usuyuki_white {
+  color: var(--usuyuki_white);
+}
+.border-usuyuki_white {
+  border-color: var(--usuyuki_white);
+}
+
+.bg-usuyuki_black {
+  background-color: var(--usuyuki_black);
+}
+.text-usuyuki_black {
+  color: var(--usuyuki_black);
+}
+.border-usuyuki_black {
+  border-color: var(--usuyuki_black);
+}
+
+.bg-u_c_1 {
+  background-color: var(--u_c_1);
+}
+.text-u_c_1 {
+  color: var(--u_c_1);
+}
+.border-u_c_1 {
+  border-color: var(--u_c_1);
+}
+
+.bg-u_c_2 {
+  background-color: var(--u_c_2);
+}
+.text-u_c_2 {
+  color: var(--u_c_2);
+}
+.border-u_c_2 {
+  border-color: var(--u_c_2);
+}
+
+.bg-u_c_3 {
+  background-color: var(--u_c_3);
+}
+.text-u_c_3 {
+  color: var(--u_c_3);
+}
+.border-u_c_3 {
+  border-color: var(--u_c_3);
+}
+
+.bg-u_c_4 {
+  background-color: var(--u_c_4);
+}
+.text-u_c_4 {
+  color: var(--u_c_4);
+}
+.border-u_c_4 {
+  border-color: var(--u_c_4);
+}
+
+.bg-u_c_5 {
+  background-color: var(--u_c_5);
+}
+.text-u_c_5 {
+  color: var(--u_c_5);
+}
+.border-u_c_5 {
+  border-color: var(--u_c_5);
+}
+
+/* フォント */
+body {
+  font-family: "Kiwi Maru", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
+  color: var(--usuyuki_black);
+
+  /* ↓bodyにoverflowはそもそも効かない */
+  /* position: relative;
+  overflow: hidden; */
+}
+.font-rampart {
+  font-family: "Rampart One", cursive;
+}
+
+main {
+  width: calc(90vw - 200px);
+  /* navが192px */
+  min-height: calc(100vh - 140px);
+}
+header {
+  height: 70px;
+  border-bottom: 2px solid var(--u_c_1);
+}
+footer {
+  height: 70px;
+  margin: 0 0;
+  border-top: 2px dotted var(--u_c_1);
+}
+
+a:hover {
+  color: var(--u_c_4);
+  transition: 0.5s;
+}
+
+.top-image {
+  width: 150px;
+  height: 150px;
+  /* サイズ揃える */
+  object-fit: cover;
+  border-radius: 40% 70% 50% 30%/50%;
+  filter: grayscale(100%);
+}
+.top-image:hover {
+  filter: grayscale(0%);
+  transition: 0.5s;
+}
+
+.genre-tag {
+  background-color: var(--u_c_1);
+  color: var(--usuyuki_black);
+  border-radius: 4px;
+  padding: 0.25em 0.5em;
+}
+@media screen and (max-width: 599px) {
+  /* スマホ */
+  main {
+    max-width: 100vw;
+    min-width: 100vw;
+  }
+}
+@media screen and (min-width: 599px) and (max-width: 1024px) {
+}

@@ -1,0 +1,69 @@
+/** @format */
+.leftNav_line {
+  background-color: var(--u_c_5);
+  width: 4px;
+  height: 290px;
+  margin-right: 10px;
+}
+
+.portfolio_menu {
+  display: flex;
+  position: sticky;
+  top: 0px;
+  left: 12px;
+  margin: 0 12px;
+}
+
+/* ボタン周り */
+.nav_button {
+  display: none;
+}
+.nav_button_hidden {
+  display: none;
+}
+
+@media screen and (max-width: 599px) {
+  /* スマホ */
+  .portfolio_menu {
+    width: 0px;
+    transition: 0.5s;
+    opacity: 0;
+    margin: 0 0;
+  }
+
+  .nav_button {
+    width: 0px;
+    position: fixed;
+    top: 12px;
+    left: 10px;
+    display: block;
+    cursor: pointer;
+    z-index: 3;
+    transition: 0.5s;
+  }
+  .nav_button_hidden {
+    width: 0px;
+    display: none;
+  }
+  .nav_button::before {
+    font-family: "Material Icons";
+    content: "chevron_right";
+    font-size: 24px;
+    color: var(--u_c_5);
+  }
+  /* ボタン押したときの色々 */
+  .nav_button_hidden:checked ~ .portfolio_menu {
+    width: 50vw;
+    overflow: hidden;
+    opacity: 1;
+    transition: 0.5s;
+    margin-left: 16px;
+  }
+  .nav_button_hidden:checked ~ .nav_button {
+    transition: 0.5s;
+    left: 110px;
+  }
+  .nav_button_hidden:checked ~ .nav_button::before {
+    content: "chevron_left";
+  }
+}
