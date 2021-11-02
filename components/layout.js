@@ -3,6 +3,7 @@
 import Head from "next/head";
 import styles from "../styles/conpeitou.module.css";
 import Header from "./Header";
+import LeftNav from "./leftNav";
 import Footer from "./Footer";
 
 export default function Layout(props) {
@@ -10,7 +11,7 @@ export default function Layout(props) {
     <div>
       <Head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
 
         <meta name="description" content="{うすゆきのポートフォリオです。}" />
         <title>{props.title_prefix} | うすゆきポートフォリオ</title>
@@ -51,8 +52,14 @@ export default function Layout(props) {
           href="/img/favicon/icon-192x192.png"
         />
       </Head>
-      <Header />
-      <main>{props.children}</main>
+
+      <div className="flex md:justify-center">
+        <LeftNav />
+        <div>
+          <Header pageTitle={props.pageTitle} />
+          <main>{props.children}</main>
+        </div>
+      </div>
       <Footer />
     </div>
   );

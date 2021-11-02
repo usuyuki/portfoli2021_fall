@@ -1,6 +1,7 @@
 /** @format */
-.leftNav-line {
+.leftNav_line {
   background-color: var(--u_c_5);
   width: 4px;
-  height: 120px;
+  height: 290px;
+  margin-right: 10px;
 }

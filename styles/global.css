@@ -88,11 +88,29 @@
 body {
   font-family: "Kiwi Maru", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", Meiryo, sans-serif;
+  color: var(--usuyuki_black);
 }
 .font-rampart {
   font-family: "Rampart One", cursive;
 }
 
 main {
-  max-width: 1400px;
+  min-width: 1400px;
+  max-width: 1700px;
+  /* navが192px */
+  min-height: calc(100vh - 140px);
+}
+header {
+  height: 70px;
+  border-bottom: 2px solid var(--u_c_1);
+}
+footer {
+  height: 70px;
+  margin: 0 0;
+  border-top: 2px dotted var(--u_c_1);
+}
+
+a:hover {
+  color: var(--u_c_4);
+  transition: 0.5s;
 }
