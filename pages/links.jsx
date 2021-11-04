@@ -4,9 +4,9 @@ import Layout from "../components/layout";
 
 // レンダリング前に実行される
 export const getServerSideProps = async () => {
-  const data = await fetch("https://usuyuki.net/jsonapi/node/link").then((r) =>
-    r.json()
-  );
+  const data = await fetch(
+    "https://usuyuki.net/jsonapi/node/link?sort=-created"
+  ).then((r) => r.json());
   return { props: { data } };
 };
 
@@ -15,7 +15,7 @@ export default function Links({ data }) {
   let pageTitle = "Links";
   // const { data, error } = useSWR("https://usuyuki.net/jsonapi/node/link");
   // const [data, setData] = useState({ message: "", data: [] })
-  console.log(data);
+
   return (
     <div>
       <Layout title_prefix={title_prefix} pageTitle={pageTitle}>

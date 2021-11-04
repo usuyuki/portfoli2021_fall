@@ -1,15 +1,17 @@
 /** @format */
 
 import Layout from "../components/layout";
+import Heading1 from "../components/decoration/heading1";
+import TimelineLayout from "../components/timelineLayout";
 
 export const getServerSideProps = async () => {
-  const data = await fetch(
-    "https://usuyuki.net/jsonapi/node/history?sort=-created&include=field_history_genre"
+  const history = await fetch(
+    "https://usuyuki.net/jsonapi/node/history?sort=field_history_date&include=field_history_genre"
   ).then((r) => r.json());
-  return { props: { data } };
+  return { props: { history } };
 };
 
-export default function Home({ data }) {
+export default function Home({ history }) {
   let title_prefix = "プロフィール";
   let pageTitle = "Profile";
 
@@ -20,13 +22,14 @@ export default function Home({ data }) {
   value_sortedBy_genre["仕事"] = [];
   value_sortedBy_genre["団体"] = [];
   value_sortedBy_genre["学業"] = [];
+  value_sortedBy_genre["資格"] = [];
 
   //ジャンル取得
-  data.included.forEach((element) => {
+  history.included.forEach((element) => {
     history_genre_names[element.id] = element.attributes.name;
   });
   //ジャンルごとに分ける
-  data.data.forEach((value) => {
+  history.data.forEach((value) => {
     switch (
       history_genre_names[value.relationships.field_history_genre.data[0].id]
     ) {
@@ -61,6 +64,16 @@ export default function Home({ data }) {
           ],
         ]);
         break;
+      case "資格":
+        value_sortedBy_genre["資格"].push([
+          value.attributes.field_history_date,
+          value.attributes.title,
+          value.attributes.body != null ? value.attributes.body.value : "",
+          history_genre_names[
+            value.relationships.field_history_genre.data[0].id
+          ],
+        ]);
+        break;
       case "学業":
         value_sortedBy_genre["学業"].push([
           value.attributes.field_history_date,
@@ -75,26 +88,31 @@ export default function Home({ data }) {
         console.log("抜け漏れあり");
     }
   });
-  console.log(value_sortedBy_genre);
 
   //出力
   return (
     <div>
       <Layout title_prefix={title_prefix} pageTitle={pageTitle}>
-        <div className="flex justify-center ">
-          {value_sortedBy_genre["学業"].map((value, key) => {
-            {
-              console.log(value[0]);
-            }
-            return (
-              <div className="m-12" key={key}>
-                <p> {value[0]}</p>
-                <p> {value[1]}</p>
-                <p> {value[2]}</p>
-                <p> {value[3]}</p>
-              </div>
-            );
-          })}
+        <div>
+          <article>
+            <Heading1 title={"学業"} />
+            <TimelineLayout content={value_sortedBy_genre["学業"]} />
+          </article>
+
+          <article>
+            <Heading1 title={"仕事"} />
+            <TimelineLayout content={value_sortedBy_genre["仕事"]} />
+          </article>
+
+          <article>
+            <Heading1 title={"資格"} />
+            <TimelineLayout content={value_sortedBy_genre["資格"]} />
+          </article>
+
+          <article>
+            <Heading1 title={"団体"} />
+            <TimelineLayout content={value_sortedBy_genre["団体"]} />
+          </article>
         </div>
       </Layout>
     </div>

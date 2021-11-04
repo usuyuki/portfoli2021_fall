@@ -18,15 +18,12 @@ export default function Home({ data }) {
   let genre_names = {}; //[ジャンルid]=ジャンル名
 
   data.included.forEach((element) => {
-    console.log(element);
     if (element.type == "file--file") {
       image_urls.push("https://usuyuki.net/" + element.attributes.uri.url);
     } else if (element.type == "taxonomy_term--works_genre") {
       genre_names[element.id] = element.attributes.name;
     }
   });
-  console.log(image_urls);
-  console.log(genre_names);
 
   return (
     <div>

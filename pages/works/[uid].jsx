@@ -1,6 +1,7 @@
 /** @format */
 
 import Layout from "../../components/layout";
+import removeHTMLTag from "../../lib/removeHTMLTag";
 
 export const getServerSideProps = async ({ params }) => {
   //   const router = useRouter();
@@ -11,7 +12,6 @@ export const getServerSideProps = async ({ params }) => {
 };
 
 export default function WorksIndividual({ data }) {
-  console.log(data);
   let title_prefix = "Works";
   let pageTitle = "Works";
   return (
@@ -21,12 +21,8 @@ export default function WorksIndividual({ data }) {
         <h1 className="font-rampart text-center text-4xl">
           {data.data.attributes.title}
         </h1>
-        <p>
-          {data.data.attributes.body.value.replace(
-            /<("[^"]*"|'[^']*'|[^'">])*>/g,
-            ""
-          )}
-        </p>
+
+        <p>{removeHTMLTag(data.data.attributes.body.value)} </p>
       </Layout>
     </div>
   );

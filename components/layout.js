@@ -10,7 +10,7 @@ export default function Layout(props) {
   return (
     <div>
       <Head>
-        <meta charset="utf-8" />
+        <meta http-equiv="content-language" content="ja" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
