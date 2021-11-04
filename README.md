@@ -1,5 +1,9 @@
 <!-- @format -->
 
+# TL;DR
+
+Drupal API を叩いて表示する Next.js 製ポートフォリオ
+
 # 参考記事
 
 https://zenn.dev/terrierscript/books/2020-09-next-js/viewer/1-5

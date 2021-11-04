@@ -14,7 +14,6 @@ export default function Home({ data }) {
   let title_prefix = "ホーム";
   let pageTitle = "usuyuki portfolio";
   let counter_for_meta = 0;
-  const contents_amount = 6;
   let image_urls = []; //urlの配列
   let genre_names = {}; //[ジャンルid]=ジャンル名
 
@@ -35,7 +34,7 @@ export default function Home({ data }) {
         <div className="flex justify-center ">
           {data != undefined
             ? data.data.map((value, key) => (
-                <Link href={"/works/" + value.id}>
+                <Link href={"/works/" + value.id} key={key}>
                   <a>
                     <div
                       className="cursor-pointer link-item m-12"
