@@ -25,8 +25,14 @@ export default function Layout(props) {
           content="うすゆきのポートフォリオです。"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://うすゆき.net" />
-        <meta property="og:image" content="https://うすゆき.net/ogp.jpg" />
+        <meta
+          property="og:url"
+          content="https://usuyukiportfolio.vercel.app/"
+        />
+        <meta
+          property="og:image"
+          content="https://usuyukiportfolio.vercel.app/img/ogp.png"
+        />
         {/* <meta property="fb:app_id"      content="" /> */}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@usuyuki26" />
