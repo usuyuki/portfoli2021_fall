@@ -1,12 +1,12 @@
 /** @format */
-
-import Layout from "../components/layout";
-import WorksCards from "../components/cards/worksCards";
-
+import Layout from "../../../components/layout";
+import WorksCards from "../../../components/cards/worksCards";
+import Link from "next/link";
 // レンダリング前に実行される
-export const getServerSideProps = async () => {
+export const getServerSideProps = async ({ params }) => {
   const data = await fetch(
-    "https://usuyuki.net/jsonapi/node/works?sort=-field_works_deploy_start&include=field_works_thumbnail,field_works_genre"
+    "https://usuyuki.net/jsonapi/node/works?sort=-field_works_deploy_start&include=field_works_thumbnail,field_works_genre&filter[field_works_genre.id]=" +
+      params.genreId
   ).then((r) => r.json());
   return { props: { data } };
 };
@@ -14,7 +14,6 @@ export const getServerSideProps = async () => {
 export default function Works({ data }) {
   let title_prefix = "作品";
   let pageTitle = "Works";
-
   let image_urls = []; //urlの配列
   let genre_names = {}; //[ジャンルid]=ジャンル名
 

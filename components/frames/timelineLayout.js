@@ -1,5 +1,5 @@
 /** @format */
-import removeHTMLTag from "../lib/removeHTMLTag";
+import removeHTMLTag from "../../lib/removeHTMLTag";
 export default function TimelineLayout(props) {
   return (
     <div className="container">

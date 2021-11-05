@@ -2,20 +2,24 @@
 
 import Layout from "../components/layout";
 import Heading1 from "../components/decoration/heading1";
-import TimelineLayout from "../components/timelineLayout";
+import TimelineLayout from "../components/frames/timelineLayout";
 
 export const getServerSideProps = async () => {
   const history = await fetch(
     "https://usuyuki.net/jsonapi/node/history?sort=field_history_date&include=field_history_genre"
   ).then((r) => r.json());
-  return { props: { history } };
+  const tech_stack = await fetch(
+    "https://usuyuki.net/jsonapi/node/tech_stack?include=field_tech_stack_genre"
+  ).then((r) => r.json());
+  return { props: { history, tech_stack } };
 };
 
-export default function Home({ history }) {
+export default function Home({ history, tech_stack }) {
   let title_prefix = "プロフィール";
   let pageTitle = "Profile";
 
   let history_genre_names = {}; //[ジャンルid]=ジャンル名
+  let tech_stack_genre_names = {}; //[ジャンルid]=ジャンル名
   let value_sortedBy_genre = {}; //[ジャンルid]=ジャンル名
   //連想配列の初期化をしておく
   value_sortedBy_genre["その他"] = [];
@@ -24,11 +28,20 @@ export default function Home({ history }) {
   value_sortedBy_genre["学業"] = [];
   value_sortedBy_genre["資格"] = [];
 
-  //ジャンル取得
+  /**
+   * ジャンル取得
+   */
   history.included.forEach((element) => {
     history_genre_names[element.id] = element.attributes.name;
   });
-  //ジャンルごとに分ける
+  tech_stack.included.forEach((element) => {
+    tech_stack_genre_names[element.id] = element.attributes.name;
+  });
+
+  /**
+   * ジャンルごとに分ける
+   */
+
   history.data.forEach((value) => {
     switch (
       history_genre_names[value.relationships.field_history_genre.data[0].id]
@@ -98,19 +111,20 @@ export default function Home({ history }) {
             <Heading1 title={"学業"} />
             <TimelineLayout content={value_sortedBy_genre["学業"]} />
           </article>
-
           <article>
             <Heading1 title={"仕事"} />
             <TimelineLayout content={value_sortedBy_genre["仕事"]} />
           </article>
-
           <article>
             <Heading1 title={"資格"} />
             <TimelineLayout content={value_sortedBy_genre["資格"]} />
           </article>
-
           <article>
             <Heading1 title={"団体"} />
+            <TimelineLayout content={value_sortedBy_genre["団体"]} />
+          </article>
+          <article>
+            <Heading1 title={"技術"} />
             <TimelineLayout content={value_sortedBy_genre["団体"]} />
           </article>
         </div>
