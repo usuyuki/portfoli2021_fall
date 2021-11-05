@@ -1,0 +1,44 @@
+/** @format */
+
+.url_bar {
+  border: 1px solid var(--u_c_5);
+  color: var(--u_c_5);
+  border-radius: 5px;
+  margin: 10px 10px;
+  padding: 0.5em 1em;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-45deg);
+  font-size: 1.25em;
+}
+
+.works_description {
+  width: 50vw;
+  margin: 2em auto;
+}
+.thumbnail {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 40px;
+  margin-left: 20px;
+  transform: rotate(20deg);
+}
+.releaseWrapper {
+  border: 4px dotted var(--u_c_1);
+  width: 300px;
+  border-radius: 10px;
+  margin: 1em auto;
+}
+
+@media screen and (max-width: 599px) {
+  /* スマホ */
+  .url_bar {
+    transform: rotate(0deg);
+  }
+  .works_description {
+    width: auto;
+    margin: 2em 1em;
+  }
+}
