@@ -14,7 +14,7 @@ export const getServerSideProps = async ({ params }) => {
 };
 
 export default function Works({ data, genreName }) {
-  let title_prefix = "ジャンル別";
+  let title_prefix = genreName;
   let pageTitle = genreName;
   let image_urls = []; //urlの配列
   let genre_names = {}; //[ジャンルid]=ジャンル名
