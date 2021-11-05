@@ -52,13 +52,12 @@ export default function WorksIndividual({ data }) {
       work_scale = element.attributes.name;
     }
   });
-  console.log(image_urls);
 
   return (
     <div>
       <Layout title_prefix={title_prefix} pageTitle={pageTitle}>
         <div className="flex justify-center items-center my-24 flex-col md:flex-row">
-          <div className="w-full md:w-1/4">
+          <div className="w-full md:w-1/4 order-3 md:order-1">
             {data.data.attributes.field_works_link != null
               ? data.data.attributes.field_works_link.map((value, key) => (
                   <p className={styles.url_bar} key={key}>
@@ -73,7 +72,7 @@ export default function WorksIndividual({ data }) {
                 ))
               : ""}
           </div>
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 order-2">
             <p className="text-center my-2">{work_scale}</p>
             <div className="flex items-center justify-center">
               <h1 className="font-rampart text-6xl mx-4">
@@ -81,12 +80,15 @@ export default function WorksIndividual({ data }) {
               </h1>
             </div>
             <div className="flex items-center justify-center">
-              <p className={styles.works_description}>
-                {removeHTMLTag(data.data.attributes.body.value)}{" "}
-              </p>
+              <div
+                className={styles.works_description}
+                dangerouslySetInnerHTML={{
+                  __html: data.data.attributes.body.value,
+                }}
+              />
             </div>
           </div>
-          <div className="w-full md:w-1/4">
+          <div className="w-full md:w-1/4 order-1 md:order-3">
             <img className={styles.thumbnail} src={image_thumbnail} />
           </div>
         </div>

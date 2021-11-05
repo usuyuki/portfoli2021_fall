@@ -9,6 +9,12 @@ export default function WorksGallery(props) {
           height: auto;
           margin: 10px;
         }
+        @media screen and (max-width: 599px) {
+          /* スマホ */
+          .gallery-content {
+            width: 75%;
+          }
+        }
       `}</style>
       <div className="flex items-center justify-center flex-wrap">
         {props.image_urls.map((value, key) => {

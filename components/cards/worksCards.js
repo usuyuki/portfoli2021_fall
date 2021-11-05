@@ -6,27 +6,41 @@ export default function WorksCards(props) {
     <div className="flex justify-center flex-wrap">
       {props.content.data.map((value, key) => {
         return (
-          <Link href={"/works/" + value.id} key={key}>
-            <a>
-              <div
-                className="cursor-pointer link-item m-12"
-                key={(counter_for_meta += 1)}
-              >
-                <img
-                  className="top-image "
-                  src={props.image_urls[counter_for_meta]}
-                />
-                <p> {value.attributes.title}</p>
-                <p className="genre-tag">
-                  {
-                    props.genre_names[
-                      value.relationships.field_works_genre.data[0].id
-                    ]
+          <div className="cursor-pointer link-item m-12">
+            <Link href={"/works/" + value.id} key={key}>
+              <a>
+                <div key={(counter_for_meta += 1)}>
+                  <img
+                    className="top-image "
+                    src={props.image_urls[counter_for_meta]}
+                  />
+                  <div className="flex justify-center">
+                    <p className="my-2 mx-4 text-2xl">
+                      {value.attributes.title}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </Link>
+            <div className="flex justify-center mt-4">
+              <p className="genre-tag">
+                <Link
+                  href={
+                    "/works/genre/" +
+                    value.relationships.field_works_genre.data[0].id
                   }
-                </p>
-              </div>
-            </a>
-          </Link>
+                >
+                  <a>
+                    {
+                      props.genre_names[
+                        value.relationships.field_works_genre.data[0].id
+                      ]
+                    }
+                  </a>
+                </Link>
+              </p>
+            </div>
+          </div>
         );
       })}
     </div>
