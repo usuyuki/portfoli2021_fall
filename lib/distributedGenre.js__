@@ -1,0 +1,77 @@
+/** @format */
+/**
+ * 
+ * import removeHTMLTag from "../../lib/removeHTMLTag";
+ * 
+        <p>{removeHTMLTag(data.data.attributes.body.value)} </p>
+ */
+export default function distributedGenre(value, genreList) {
+  let value_sortedBy_genre = {};
+
+  //配列の初期化
+  genreList.forEach((genre) => {
+    value_sortedBy_genre[genre] = [];
+  });
+
+  value.forEach((value) => {
+    switch (
+      history_genre_names[value.relationships.field_history_genre.data[0].id]
+    ) {
+      case "その他":
+        value_sortedBy_genre["その他"].push([
+          value.attributes.field_history_date,
+          value.attributes.title,
+          value.attributes.body != null ? value.attributes.body.value : "",
+          history_genre_names[
+            value.relationships.field_history_genre.data[0].id
+          ],
+        ]);
+        break;
+      case "アルバイト":
+      case "仕事":
+        value_sortedBy_genre["仕事"].push([
+          value.attributes.field_history_date,
+          value.attributes.title,
+          value.attributes.body != null ? value.attributes.body.value : "",
+          history_genre_names[
+            value.relationships.field_history_genre.data[0].id
+          ],
+        ]);
+        break;
+      case "団体":
+        value_sortedBy_genre["団体"].push([
+          value.attributes.field_history_date,
+          value.attributes.title,
+          value.attributes.body != null ? value.attributes.body.value : "",
+          history_genre_names[
+            value.relationships.field_history_genre.data[0].id
+          ],
+        ]);
+        break;
+      case "資格":
+        value_sortedBy_genre["資格"].push([
+          value.attributes.field_history_date,
+          value.attributes.title,
+          value.attributes.body != null ? value.attributes.body.value : "",
+          history_genre_names[
+            value.relationships.field_history_genre.data[0].id
+          ],
+        ]);
+        break;
+      case "学業":
+        value_sortedBy_genre["学業"].push([
+          value.attributes.field_history_date,
+          value.attributes.title,
+          value.attributes.body != null ? value.attributes.body.value : "",
+          history_genre_names[
+            value.relationships.field_history_genre.data[0].id
+          ],
+        ]);
+        break;
+      default:
+        console.log("抜け漏れあり");
+    }
+  });
+
+  return value_sortedBy_genre;
+}

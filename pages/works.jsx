@@ -1,38 +1,40 @@
 /** @format */
 
 import Layout from "../components/layout";
+import WorksCards from "../components/cards/worksCards";
 
 // レンダリング前に実行される
 export const getServerSideProps = async () => {
-  const data = await fetch("https://usuyuki.net/jsonapi/node/works").then((r) =>
-    r.json()
-  );
+  const data = await fetch(
+    "https://usuyuki.net/jsonapi/node/works?sort=-field_works_deploy_start&include=field_works_thumbnail,field_works_genre"
+  ).then((r) => r.json());
   return { props: { data } };
 };
 
 export default function Works({ data }) {
-  let title_prefix = "Works";
+  let title_prefix = "作品";
   let pageTitle = "Works";
-  // const { data, error } = useSWR("https://usuyuki.net/jsonapi/node/link");
-  // const [data, setData] = useState({ message: "", data: [] })
-  console.log(data);
+
+  let image_urls = []; //urlの配列
+  let genre_names = {}; //[ジャンルid]=ジャンル名
+
+  data.included.forEach((element) => {
+    if (element.type == "file--file") {
+      image_urls.push("https://usuyuki.net/" + element.attributes.uri.url);
+    } else if (element.type == "taxonomy_term--works_genre") {
+      genre_names[element.id] = element.attributes.name;
+    }
+  });
+
   return (
     <div>
       <Layout title_prefix={title_prefix} pageTitle={pageTitle}>
-        <div className="flex flex-wrap">
-          {data != undefined
-            ? data.data.map((value, key) => (
-                <div className="link-item m-12" key={key}>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={value.attributes.field_link_link.uri}
-                  >
-                    {value.attributes.title}
-                  </a>
-                </div>
-              ))
-            : "取得に失敗しました"}
+        <div className="">
+          <WorksCards
+            content={data}
+            image_urls={image_urls}
+            genre_names={genre_names}
+          />
         </div>
       </Layout>
     </div>
