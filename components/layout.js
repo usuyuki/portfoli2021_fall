@@ -53,13 +53,14 @@ export default function Layout(props) {
           href="/img/favicon/icon-192x192.png"
         />
       </Head>
-
-      <div className="flex md:justify-center overflow-hidden relative">
+      {/* ↓overflow-hiddenはつかえない。position stickyが壊れる */}
+      <div className="flex md:justify-center  relative mb-24">
         <LeftNav />
         <div>
           <Header pageTitle={props.pageTitle} />
           <main>{props.children}</main>
         </div>
+        <div className="hidden md:block" style={{ width: "126px" }}></div>
       </div>
       <Footer />
     </div>
