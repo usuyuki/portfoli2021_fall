@@ -2,9 +2,9 @@
 
 import Head from "next/head";
 import styles from "../styles/conpeitou.module.css";
-import Header from "./Header";
+import Header from "./header";
 import LeftNav from "./leftNav";
-import Footer from "./Footer";
+import Footer from "./footer";
 
 export default function Layout(props) {
   return (
