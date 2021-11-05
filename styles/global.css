@@ -125,6 +125,7 @@ a:hover {
   object-fit: cover;
   border-radius: 40% 70% 50% 30%/50%;
   filter: grayscale(100%);
+  margin: 0 auto;
 }
 .top-image:hover {
   filter: grayscale(0%);
@@ -136,12 +137,16 @@ a:hover {
   color: var(--usuyuki_black);
   border-radius: 4px;
   padding: 0.25em 0.5em;
+  display: inline-block;
 }
 @media screen and (max-width: 599px) {
   /* スマホ */
   main {
     max-width: 100vw;
     min-width: 100vw;
+  }
+  .top-image {
+    filter: grayscale(0%);
   }
 }
 @media screen and (min-width: 599px) and (max-width: 1024px) {

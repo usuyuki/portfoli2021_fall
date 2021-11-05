@@ -39,6 +39,10 @@
   }
   .works_description {
     width: auto;
-    margin: 2em 1em;
+    margin: 2em 2em;
+  }
+  .thumbnail {
+    margin: 10px auto;
+    margin-top: 0px;
   }
 }

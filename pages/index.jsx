@@ -29,15 +29,15 @@ export default function Home({ data }) {
   return (
     <div>
       <Layout title_prefix={title_prefix} pageTitle={pageTitle}>
-        <p className="text-center text-3xl my-12 mx-4">ごあいさつ</p>
+        <p className="text-center text-3xl mt-24 mb-4 mx-4">ごあいさつ</p>
         <div className="flex  justify-center">
-          <p className="text-xl">
+          <p className="text-xl mx-4">
             うすゆきと申します。
             <br />
             最近はキャラメルポップコーンをよく食べます。
           </p>
         </div>
-        <p className="text-center text-3xl my-12 mx-4">最近つくったもの</p>
+        <p className="text-center text-3xl mt-24 mb-4 mx-4">最近つくったもの</p>
         <div className="">
           <WorksCards
             content={data}
