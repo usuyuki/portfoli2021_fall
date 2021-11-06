@@ -139,6 +139,14 @@ a:hover {
   padding: 0.25em 0.5em;
   display: inline-block;
 }
+
+.archive-thumbnail {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 0 auto;
+  border-radius: 20px;
+}
 @media screen and (max-width: 599px) {
   /* スマホ */
   main {
