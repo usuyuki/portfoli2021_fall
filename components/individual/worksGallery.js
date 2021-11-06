@@ -5,9 +5,9 @@ export default function WorksGallery(props) {
     <div>
       <style jsx>{`
         .gallery-content {
-          width: 25%;
+          width: 50%;
           height: auto;
-          margin: 10px;
+          padding: 10px;
         }
         @media screen and (max-width: 599px) {
           /* スマホ */
