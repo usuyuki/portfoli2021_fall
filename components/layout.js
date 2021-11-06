@@ -10,14 +10,14 @@ export default function Layout(props) {
   return (
     <div>
       <Head>
-        <meta http-equiv="content-language" content="ja" />
+        <meta httpEquiv="content-language" content="ja" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
 
         <meta name="description" content="{うすゆきのポートフォリオです。}" />
         <title>{props.title_prefix} | うすゆきポートフォリオ</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         {/* ogp */}
         <meta property="og:title" content="うすゆきポートフォリオ" />
         <meta
@@ -57,7 +57,7 @@ export default function Layout(props) {
         />
       </Head>
       {/* ↓overflow-hiddenはつかえない。position stickyが壊れる */}
-      <div className="flex md:justify-center  relative mb-24">
+      <div className="flex md:justify-center  relative ">
         <LeftNav />
         <div>
           <Header pageTitle={props.pageTitle} />

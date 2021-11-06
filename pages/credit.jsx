@@ -5,8 +5,8 @@ import Layout from "../components/layout";
 // レンダリング前に実行される
 
 export default function Credit() {
-  let title_prefix = "Links";
-  let pageTitle = "Links";
+  let title_prefix = "Credit";
+  let pageTitle = "Credit";
   // const { data, error } = useSWR("https://usuyuki.net/jsonapi/node/link");
   // const [data, setData] = useState({ message: "", data: [] })
 

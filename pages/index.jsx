@@ -2,17 +2,25 @@
 
 import Layout from "../components/layout";
 import Link from "next/link";
+import Image from "next/image";
 import WorksCards from "../components/cards/worksCards";
+import SocialIcons from "../components/decoration/socialIcons";
+import NormalButton from "../components/button/normalButton";
 import BlogCards from "../components/cards/blogCards";
 import { Bar } from "react-chartjs-2";
 import { getBlogsSortedPostsData } from "../lib/WPBlogs";
 
-export const getServerSideProps = async () => {
-  const data = await fetch(
-    "https://usuyuki.net/jsonapi/node/works?sort=-created&include=field_works_thumbnail,field_works_genre&page[limit]=5"
-  ).then((r) => r.json());
-  const allBlogsData = await getBlogsSortedPostsData();
-  return { props: { data, allBlogsData } };
+export const getStaticProps = async () => {
+  const [response1, response2] = await Promise.all([
+    fetch(
+      "https://usuyuki.net/jsonapi/node/works?sort=-created&include=field_works_thumbnail,field_works_genre&page[limit]=5"
+    ).then((r) => r.json()),
+    getBlogsSortedPostsData(),
+  ]);
+
+  const data = response1;
+  const allBlogsData = response2;
+  return { props: { data, allBlogsData }, revalidate: 120 };
 };
 
 export default function Home({ data, allBlogsData }) {
@@ -74,17 +82,23 @@ export default function Home({ data, allBlogsData }) {
             最近はキャラメルポップコーンをよく食べます。
           </p>
         </div>
-        <img
-          className="mx-auto my-12"
+        <Image
+          width={500}
+          height={500}
+          className="md:mx-auto my-12 px-4"
           src="https://grass-graph.appspot.com/images/Usuyuki.png"
         />
-        <div className="flex justify-center">
-          <img
-            className="mx-6 my-4"
+        <div className="flex justify-center flex-wrap">
+          <Image
+            width={500}
+            height={500}
+            className="px-6 md:px-6 my-4 "
             src="https://raw.githubusercontent.com/Usuyuki/Usuyuki/master/profile-summary-card-output/solarized/2-most-commit-language.svg"
           />
-          <img
-            className="mx-6 my-4"
+          <Image
+            width={500}
+            height={500}
+            className="px-6 md:px-6 my-4 "
             src="https://raw.githubusercontent.com/Usuyuki/Usuyuki/master/profile-summary-card-output/solarized/1-repos-per-language.svg"
           />
         </div>
@@ -96,6 +110,7 @@ export default function Home({ data, allBlogsData }) {
             maintainAspectRatio: false,
           }}
         /> */}
+
         <p className="text-center text-3xl mt-24 mb-4 mx-4">最近つくったもの</p>
         <div className="">
           <WorksCards
@@ -104,10 +119,17 @@ export default function Home({ data, allBlogsData }) {
             genre_names={genre_names}
           />
         </div>
-        <p className="text-center text-3xl mt-24 mb-4 mx-4">最近かいたきじ</p>
+        <NormalButton href="works" title="もっと見る" />
+        <SocialIcons />
+        <p className="text-center text-3xl mt-24 mb-4 mx-4">最近かいた記事</p>
         <div className="">
           <BlogCards content={allBlogsData} />
         </div>
+        <NormalButton
+          href="https://blog.usuyuki.net/"
+          title="もっと見る(ブログサイトへ)"
+        />
+        <SocialIcons />
       </Layout>
     </div>
   );

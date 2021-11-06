@@ -2,21 +2,32 @@
 
 import Layout from "../../components/layout";
 import removeHTMLTag from "../../lib/removeHTMLTag";
+import Image from "next/image";
 import styles from "../../styles/individualWorks.module.css";
 import Heading1 from "../../components/decoration/heading1";
 import WorksGenres from "../../components/individual/worksGenres";
 import WorksTechs from "../../components/individual/worksTechs";
 import WorksGallery from "../../components/individual/worksGallery";
-export const getServerSideProps = async ({ params }) => {
+export const getStaticProps = async ({ params }) => {
   //例
   //https://usuyuki.net/jsonapi/node/article/382f0ffe-f2db-416e-bfee-e4b0e3334b35?include=field_works_gallery,field_works_genre,field_works_thumbnail,field_works_scale,field_works_tech
   const data = await fetch(
     "https://usuyuki.net/jsonapi/node/article/" +
-      params.uid +
+      params.productId +
       "?include=field_works_thumbnail,field_works_gallery,field_works_genre,field_works_thumbnail,field_works_scale,field_works_tech"
   ).then((r) => r.json());
-  return { props: { data } };
+  return { props: { data }, revalidate: 120 };
 };
+
+export async function getStaticPaths() {
+  const data = await fetch("https://usuyuki.net/jsonapi/node/works").then((r) =>
+    r.json()
+  );
+  const paths = data.data.map((value) => ({
+    params: { productId: value.id },
+  }));
+  return { paths, fallback: false };
+}
 
 export default function WorksIndividual({ data }) {
   let title_prefix = data.data.attributes.title;
@@ -89,7 +100,12 @@ export default function WorksIndividual({ data }) {
             </div>
           </div>
           <div className="w-full md:w-1/4 order-1 md:order-3">
-            <img className={styles.thumbnail} src={image_thumbnail} />
+            <Image
+              width={500}
+              height={500}
+              className={styles.thumbnail}
+              src={image_thumbnail}
+            />
           </div>
         </div>
         <div className="flex justify-center flex-wrap">
