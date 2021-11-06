@@ -3,6 +3,7 @@
 import Layout from "../components/layout";
 import Link from "next/link";
 import WorksCards from "../components/cards/worksCards";
+import SocialIcons from "../components/decoration/socialIcons";
 import BlogCards from "../components/cards/blogCards";
 import { Bar } from "react-chartjs-2";
 import { getBlogsSortedPostsData } from "../lib/WPBlogs";
@@ -96,6 +97,7 @@ export default function Home({ data, allBlogsData }) {
             maintainAspectRatio: false,
           }}
         /> */}
+        <SocialIcons />
         <p className="text-center text-3xl mt-24 mb-4 mx-4">最近つくったもの</p>
         <div className="">
           <WorksCards
