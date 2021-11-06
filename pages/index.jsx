@@ -10,10 +10,15 @@ import { Bar } from "react-chartjs-2";
 import { getBlogsSortedPostsData } from "../lib/WPBlogs";
 
 export const getServerSideProps = async () => {
-  const data = await fetch(
-    "https://usuyuki.net/jsonapi/node/works?sort=-created&include=field_works_thumbnail,field_works_genre&page[limit]=5"
-  ).then((r) => r.json());
-  const allBlogsData = await getBlogsSortedPostsData();
+  const [response1, response2] = await Promise.all([
+    fetch(
+      "https://usuyuki.net/jsonapi/node/works?sort=-created&include=field_works_thumbnail,field_works_genre&page[limit]=5"
+    ).then((r) => r.json()),
+    getBlogsSortedPostsData(),
+  ]);
+
+  const data = response1;
+  const allBlogsData = response2;
   return { props: { data, allBlogsData } };
 };
 
