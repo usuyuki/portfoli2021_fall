@@ -82,25 +82,28 @@ export default function Home({ data, allBlogsData }) {
             最近はキャラメルポップコーンをよく食べます。
           </p>
         </div>
-        <Image
-          width={500}
-          height={500}
-          className="md:mx-auto my-12 px-4"
-          src="https://grass-graph.appspot.com/images/Usuyuki.png"
-        />
+        <div className="md:mx-auto my-12 px-4 text-center">
+          <Image
+            width={870}
+            height={155}
+            src="https://grass-graph.appspot.com/images/Usuyuki.png"
+          />
+        </div>
         <div className="flex justify-center flex-wrap">
-          <Image
-            width={500}
-            height={500}
-            className="px-6 md:px-6 my-4 "
-            src="https://raw.githubusercontent.com/Usuyuki/Usuyuki/master/profile-summary-card-output/solarized/2-most-commit-language.svg"
-          />
-          <Image
-            width={500}
-            height={500}
-            className="px-6 md:px-6 my-4 "
-            src="https://raw.githubusercontent.com/Usuyuki/Usuyuki/master/profile-summary-card-output/solarized/1-repos-per-language.svg"
-          />
+          <div className="px-6 md:px-6 my-4 ">
+            <Image
+              width={340}
+              height={200}
+              src="https://raw.githubusercontent.com/Usuyuki/Usuyuki/master/profile-summary-card-output/solarized/2-most-commit-language.svg"
+            />
+          </div>
+          <div className="px-6 md:px-6 my-4 ">
+            <Image
+              width={340}
+              height={200}
+              src="https://raw.githubusercontent.com/Usuyuki/Usuyuki/master/profile-summary-card-output/solarized/1-repos-per-language.svg"
+            />
+          </div>
         </div>
         {/* <Bar
           data={chartData}

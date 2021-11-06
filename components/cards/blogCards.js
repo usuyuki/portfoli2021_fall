@@ -11,12 +11,9 @@ export default function BlogCards(props) {
           >
             <a target="_blank" rel="noopener noreferrer" href={value.link}>
               <div>
-                <Image
-                  width={500}
-                  height={500}
-                  className="archive-thumbnail"
-                  src={value.thumbnail}
-                />
+                <div className="archive-thumbnail">
+                  <Image width={150} height={150} src={value.thumbnail} />
+                </div>
                 <div className="flex justify-center">
                   <h4 className="my-2 mx-4 text-xl">{value.title}</h4>
                 </div>
