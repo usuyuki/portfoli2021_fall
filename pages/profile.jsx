@@ -161,6 +161,22 @@ export default function Home({ history, tech_stack }) {
   return (
     <div>
       <Layout title_prefix={title_prefix} pageTitle={pageTitle}>
+        <div>
+          <h2 className="text-center my-4 mx-4 text-3xl">うすゆき</h2>
+          <div className="flex justify-center">
+            <div className="w-full md:w-1/2">
+              <p className="">Age:19</p>
+            </div>
+            <div className="w-full md:w-1/2">
+              <span className=" material-icons text-center inline-block">
+                cottage
+              </span>
+              <p className="">Birthplace:Tottori Prefecture</p>
+              <p className="">Hometown:Shimane Prefecture</p>
+              <p className="">Residence:Tochigi Prefecture</p>
+            </div>
+          </div>
+        </div>
         <div className="">
           <article>
             <Heading1 title={"学業"} />

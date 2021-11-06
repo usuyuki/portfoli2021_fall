@@ -4,7 +4,7 @@
 
 export default function SocialIcons() {
   return (
-    <div className="flex my-12 mx-2 md:mx-20 items-center justify-center ">
+    <div className="flex my-12 mx-2 md:mx-20 items-center justify-center flex-wrap">
       {/* Twitter */}
       <div className="w-16 h-auto p-4">
         <a
@@ -30,12 +30,12 @@ export default function SocialIcons() {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://github.com/Usuyuki"
+          href="https://www.youtube.com/channel/UCI4-1pvH-0XdwfKZe4WBPhQ"
         >
           <img src="img/icons/youtube_social_icon_red.png" />
         </a>
       </div>
-      {/* qiita */}
+      {/* Qiita */}
       <div className="w-16 h-auto p-4">
         <a
           target="_blank"
@@ -45,7 +45,7 @@ export default function SocialIcons() {
           <img src="img/icons/Qiita.png" />
         </a>
       </div>
-      {/* zenn */}
+      {/* Zenn */}
       <div className="w-16 h-auto p-4">
         <a
           target="_blank"
