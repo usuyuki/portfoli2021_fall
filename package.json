@@ -13,7 +13,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
+    "chart.js": "^3.6.0",
     "postcss": "^8.3.5",
+    "react-chartjs-2": "^3.3.0",
     "tailwindcss": "^2.2.4"
   }
 }

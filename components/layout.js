@@ -29,10 +29,7 @@ export default function Layout(props) {
           property="og:url"
           content="https://usuyukiportfolio.vercel.app/"
         />
-        <meta
-          property="og:image"
-          content="https://usuyukiportfolio.vercel.app/img/ogp.png"
-        />
+        <meta property="og:image" content="/img/ogp.png" />
         {/* <meta property="fb:app_id"      content="" /> */}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@usuyuki26" />
