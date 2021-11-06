@@ -156,7 +156,7 @@ export default function Home({ history, tech_stack }) {
         console.log("抜け漏れあり");
     }
   });
-  console.log(value_sortedBy_genreTS["フレームワーク"]);
+
   //出力
   return (
     <div>
