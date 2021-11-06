@@ -7,7 +7,7 @@ import Heading1 from "../../components/decoration/heading1";
 import WorksGenres from "../../components/individual/worksGenres";
 import WorksTechs from "../../components/individual/worksTechs";
 import WorksGallery from "../../components/individual/worksGallery";
-export const getServerSideProps = async ({ params }) => {
+export const getStaticProps = async ({ params }) => {
   //例
   //https://usuyuki.net/jsonapi/node/article/382f0ffe-f2db-416e-bfee-e4b0e3334b35?include=field_works_gallery,field_works_genre,field_works_thumbnail,field_works_scale,field_works_tech
   const data = await fetch(

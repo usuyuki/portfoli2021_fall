@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import WorksCards from "../components/cards/worksCards";
 
 // レンダリング前に実行される
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const data = await fetch(
     "https://usuyuki.net/jsonapi/node/works?sort=-field_works_deploy_start&include=field_works_thumbnail,field_works_genre"
   ).then((r) => r.json());

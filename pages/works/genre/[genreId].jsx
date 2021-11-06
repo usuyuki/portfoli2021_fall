@@ -4,7 +4,7 @@ import WorksCards from "../../../components/cards/worksCards";
 import changeUidToName from "../../../lib/changeUidToName";
 import Link from "next/link";
 // レンダリング前に実行される
-export const getServerSideProps = async ({ params }) => {
+export const getStaticProps = async ({ params }) => {
   const data = await fetch(
     "https://usuyuki.net/jsonapi/node/works?sort=-field_works_deploy_start&include=field_works_thumbnail,field_works_genre&filter[field_works_genre.id]=" +
       params.genreId

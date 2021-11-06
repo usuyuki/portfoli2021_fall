@@ -9,7 +9,7 @@ import BlogCards from "../components/cards/blogCards";
 import { Bar } from "react-chartjs-2";
 import { getBlogsSortedPostsData } from "../lib/WPBlogs";
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const [response1, response2] = await Promise.all([
     fetch(
       "https://usuyuki.net/jsonapi/node/works?sort=-created&include=field_works_thumbnail,field_works_genre&page[limit]=5"

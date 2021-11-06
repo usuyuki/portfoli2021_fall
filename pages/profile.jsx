@@ -5,7 +5,7 @@ import Heading1 from "../components/decoration/heading1";
 import TimelineLayout from "../components/frames/timelineLayout";
 import TechStackLayout from "../components/frames/techStackLayout";
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const history = await fetch(
     "https://usuyuki.net/jsonapi/node/history?sort=field_history_date&include=field_history_genre"
   ).then((r) => r.json());

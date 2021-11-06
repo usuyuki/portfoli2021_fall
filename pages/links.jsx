@@ -3,7 +3,7 @@
 import Layout from "../components/layout";
 
 // レンダリング前に実行される
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const data = await fetch(
     "https://usuyuki.net/jsonapi/node/link?sort=-created"
   ).then((r) => r.json());
