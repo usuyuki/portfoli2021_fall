@@ -8,7 +8,7 @@ export const getStaticProps = async ({ params }) => {
     "https://usuyuki.net/jsonapi/node/works?sort=-field_works_deploy_start&include=field_works_thumbnail,field_works_genre&filter[field_works_tech.id]=" +
       params.techId
   ).then((r) => r.json());
-  return { props: { data } };
+  return { props: { data }, revalidate: 120 };
 };
 
 export default function Works({ data }) {

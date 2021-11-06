@@ -1,5 +1,5 @@
 /** @format */
-
+import Image from "next/image";
 export default function BlogCards(props) {
   return (
     <div className="flex justify-center flex-wrap">
@@ -11,7 +11,12 @@ export default function BlogCards(props) {
           >
             <a target="_blank" rel="noopener noreferrer" href={value.link}>
               <div>
-                <img className="archive-thumbnail" src={value.thumbnail} />
+                <Image
+                  width={500}
+                  height={500}
+                  className="archive-thumbnail"
+                  src={value.thumbnail}
+                />
                 <div className="flex justify-center">
                   <h4 className="my-2 mx-4 text-xl">{value.title}</h4>
                 </div>

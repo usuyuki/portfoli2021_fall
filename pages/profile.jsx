@@ -12,7 +12,7 @@ export const getStaticProps = async () => {
   const tech_stack = await fetch(
     "https://usuyuki.net/jsonapi/node/tech_stack?include=field_tech_stack_genre"
   ).then((r) => r.json());
-  return { props: { history, tech_stack } };
+  return { props: { history, tech_stack }, revalidate: 120 };
 };
 
 export default function Home({ history, tech_stack }) {

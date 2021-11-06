@@ -7,7 +7,7 @@ export const getStaticProps = async () => {
   const data = await fetch(
     "https://usuyuki.net/jsonapi/node/link?sort=-created"
   ).then((r) => r.json());
-  return { props: { data } };
+  return { props: { data }, revalidate: 120 };
 };
 
 export default function Links({ data }) {

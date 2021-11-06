@@ -2,6 +2,7 @@
 
 import Layout from "../components/layout";
 import Link from "next/link";
+import Image from "next/image";
 import WorksCards from "../components/cards/worksCards";
 import SocialIcons from "../components/decoration/socialIcons";
 import NormalButton from "../components/button/normalButton";
@@ -19,7 +20,7 @@ export const getStaticProps = async () => {
 
   const data = response1;
   const allBlogsData = response2;
-  return { props: { data, allBlogsData } };
+  return { props: { data, allBlogsData }, revalidate: 120 };
 };
 
 export default function Home({ data, allBlogsData }) {
@@ -81,16 +82,22 @@ export default function Home({ data, allBlogsData }) {
             最近はキャラメルポップコーンをよく食べます。
           </p>
         </div>
-        <img
+        <Image
+          width={500}
+          height={500}
           className="md:mx-auto my-12 px-4"
           src="https://grass-graph.appspot.com/images/Usuyuki.png"
         />
         <div className="flex justify-center flex-wrap">
-          <img
+          <Image
+            width={500}
+            height={500}
             className="px-6 md:px-6 my-4 "
             src="https://raw.githubusercontent.com/Usuyuki/Usuyuki/master/profile-summary-card-output/solarized/2-most-commit-language.svg"
           />
-          <img
+          <Image
+            width={500}
+            height={500}
             className="px-6 md:px-6 my-4 "
             src="https://raw.githubusercontent.com/Usuyuki/Usuyuki/master/profile-summary-card-output/solarized/1-repos-per-language.svg"
           />

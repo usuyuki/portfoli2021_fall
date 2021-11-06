@@ -10,7 +10,7 @@ export const getStaticProps = async ({ params }) => {
       params.genreId
   ).then((r) => r.json());
   const genreName = changeUidToName(params.genreId);
-  return { props: { data, genreName } };
+  return { props: { data, genreName }, revalidate: 120 };
 };
 
 export default function Works({ data, genreName }) {

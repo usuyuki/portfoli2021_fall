@@ -1,5 +1,6 @@
 /** @format */
 import Link from "next/link";
+import Image from "next/image";
 export default function WorksCards(props) {
   let counter_for_meta = 0;
   return (
@@ -13,7 +14,9 @@ export default function WorksCards(props) {
             <Link href={"/works/" + value.id}>
               <a>
                 <div key={(counter_for_meta += 1)}>
-                  <img
+                  <Image
+                    width={500}
+                    height={500}
                     className="top-image "
                     src={props.image_urls[counter_for_meta]}
                   />

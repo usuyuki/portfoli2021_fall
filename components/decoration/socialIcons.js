@@ -1,7 +1,7 @@
 /** @format */
 
 /** @format */
-
+import Image from "next/image";
 export default function SocialIcons() {
   return (
     <div className="flex my-12 mx-2 md:mx-20 items-center justify-center flex-wrap">
@@ -12,7 +12,11 @@ export default function SocialIcons() {
           rel="noopener noreferrer"
           href="https://twitter.com/usuyuki26"
         >
-          <img src="img/icons/2021 Twitter logo - blue.png" />
+          <Image
+            width={500}
+            height={500}
+            src="/img/icons/2021 Twitter logo - blue.png"
+          />
         </a>
       </div>
       {/* GitHub */}
@@ -22,7 +26,11 @@ export default function SocialIcons() {
           rel="noopener noreferrer"
           href="https://github.com/Usuyuki"
         >
-          <img src="img/icons/GitHub-Mark-64px.png" />
+          <Image
+            width={500}
+            height={500}
+            src="/img/icons/GitHub-Mark-64px.png"
+          />
         </a>
       </div>
       {/* Youtube */}
@@ -32,7 +40,11 @@ export default function SocialIcons() {
           rel="noopener noreferrer"
           href="https://www.youtube.com/channel/UCI4-1pvH-0XdwfKZe4WBPhQ"
         >
-          <img src="img/icons/youtube_social_icon_red.png" />
+          <Image
+            width={500}
+            height={500}
+            src="/img/icons/youtube_social_icon_red.png"
+          />
         </a>
       </div>
       {/* Qiita */}
@@ -42,7 +54,7 @@ export default function SocialIcons() {
           rel="noopener noreferrer"
           href="https://qiita.com/Usuyuki"
         >
-          <img src="img/icons/Qiita.png" />
+          <Image width={500} height={500} src="/img/icons/Qiita.png" />
         </a>
       </div>
       {/* Zenn */}
@@ -52,7 +64,7 @@ export default function SocialIcons() {
           rel="noopener noreferrer"
           href="https://zenn.dev/usuyuki"
         >
-          <img src="img/icons/Zenn.svg" />
+          <Image width={500} height={500} src="/img/icons/Zenn.svg" />
         </a>
       </div>
     </div>
