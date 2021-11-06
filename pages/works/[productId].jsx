@@ -13,11 +13,21 @@ export const getStaticProps = async ({ params }) => {
   //https://usuyuki.net/jsonapi/node/article/382f0ffe-f2db-416e-bfee-e4b0e3334b35?include=field_works_gallery,field_works_genre,field_works_thumbnail,field_works_scale,field_works_tech
   const data = await fetch(
     "https://usuyuki.net/jsonapi/node/article/" +
-      params.uid +
+      params.productId +
       "?include=field_works_thumbnail,field_works_gallery,field_works_genre,field_works_thumbnail,field_works_scale,field_works_tech"
   ).then((r) => r.json());
   return { props: { data }, revalidate: 120 };
 };
+
+export async function getStaticPaths() {
+  const data = await fetch("https://usuyuki.net/jsonapi/node/works").then((r) =>
+    r.json()
+  );
+  const paths = data.data.map((value) => ({
+    params: { productId: value.id },
+  }));
+  return { paths, fallback: false };
+}
 
 export default function WorksIndividual({ data }) {
   let title_prefix = data.data.attributes.title;

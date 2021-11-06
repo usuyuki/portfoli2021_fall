@@ -11,6 +11,25 @@ export const getStaticProps = async ({ params }) => {
   return { props: { data }, revalidate: 120 };
 };
 
+export async function getStaticPaths() {
+  const data = await fetch("https://usuyuki.net/jsonapi/node/works").then((r) =>
+    r.json()
+  );
+  let idList = data.data.map((value) => {
+    return value.relationships.field_works_tech.data.map((tech) => {
+      return tech.id.toString();
+    });
+  });
+
+  let lawIds = [];
+  idList.forEach((value) => value.forEach((valueV) => lawIds.push(valueV)));
+  const paths = lawIds.map((value) => ({
+    params: { techId: value },
+  }));
+
+  return { paths, fallback: false };
+}
+
 export default function Works({ data }) {
   let title_prefix = "使用技術別";
   let pageTitle = "Works/tech";
