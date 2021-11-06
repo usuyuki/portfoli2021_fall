@@ -6,7 +6,10 @@ export default function WorksCards(props) {
     <div className="flex justify-center flex-wrap">
       {props.content.data.map((value, key) => {
         return (
-          <div className="cursor-pointer link-item m-12" key={key}>
+          <div
+            className="cursor-pointer link-item p-4 w-1/2 md:w-1/5"
+            key={key}
+          >
             <Link href={"/works/" + value.id}>
               <a>
                 <div key={(counter_for_meta += 1)}>
