@@ -55,33 +55,8 @@ export default function Credit() {
           license="不明"
           copyright="Copyright © 2016　A-Know / Moshimo-Works All Rights Are Reserved."
           description="トップページでのGitHubの草を表示に使用しています。"
-          licenseLink="https://grass-graph.appspot.com/"
+          licenseLink=""
           productLink="https://grass-graph.appspot.com/"
-        />
-        <Heading1 title={"フォント"} />
-        <CreditFrame
-          title="キウイ丸"
-          license="OFL-1.1 License"
-          copyright="Copyright 2020 The Kiwi Maru Project Authors"
-          description="このサイトのメインのフォントとして利用しています。"
-          licenseLink="https://github.com/Kiwi-KawagotoKajiru/Kiwi-Maru/blob/master/OFL.txt"
-          productLink="https://github.com/Kiwi-KawagotoKajiru/Kiwi-Maru"
-        />
-        <CreditFrame
-          title="ランパート One-Regular"
-          license="OFL-1.1 License"
-          copyright="Copyright 2020 The Rampart Project Authors"
-          description="worksページの見出しフォントとして利用しています。"
-          licenseLink="https://github.com/fontworks-fonts/Rampart/blob/master/OFL.txt"
-          productLink="https://github.com/fontworks-fonts/Rampart/blob/master/README-JP.md"
-        />
-        <CreditFrame
-          title="Material Icons"
-          license="Apache License 2.0"
-          copyright=""
-          description="見出しなどのアイコンで利用しています"
-          licenseLink="https://github.com/google/material-design-icons/blob/master/LICENSE"
-          productLink="https://fonts.google.com/icons?selected=Material+Icons"
         />
       </Layout>
     </div>

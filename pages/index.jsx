@@ -114,7 +114,9 @@ export default function Home({ data, allBlogsData }) {
           }}
         /> */}
 
-        <p className="text-center text-3xl mt-24 mb-4 mx-4">最近つくったもの</p>
+        <h3 className="text-center text-3xl mt-24 mb-4 mx-4">
+          最近つくったもの
+        </h3>
         <div className="">
           <WorksCards
             content={data}
@@ -124,7 +126,7 @@ export default function Home({ data, allBlogsData }) {
         </div>
         <NormalButton href="works" title="もっと見る" />
         <SocialIcons />
-        <p className="text-center text-3xl mt-24 mb-4 mx-4">最近かいた記事</p>
+        <j3 className="text-center text-3xl mt-24 mb-4 mx-4">最近かいた記事</j3>
         <div className="">
           <BlogCards content={allBlogsData} />
         </div>
