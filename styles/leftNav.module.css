@@ -29,6 +29,7 @@
     transition: 0.5s;
     opacity: 0;
     margin: 0 0;
+    pointer-events: none;
   }
 
   .nav_button {
@@ -48,22 +49,30 @@
   .nav_button::before {
     font-family: "Material Icons";
     content: "chevron_right";
-    font-size: 24px;
+    font-size: 32px;
     color: var(--u_c_5);
+    /* 薄めの背景 */
+    background-color: var(--u_c_2);
+    border-radius: 50%;
   }
+
   /* ボタン押したときの色々 */
+
   .nav_button_hidden:checked ~ .portfolio_menu {
     width: 50vw;
     overflow: hidden;
     opacity: 1;
     transition: 0.5s;
     margin-left: 16px;
+    pointer-events: initial;
   }
+
   .nav_button_hidden:checked ~ .nav_button {
     transition: 0.5s;
     left: 110px;
   }
   .nav_button_hidden:checked ~ .nav_button::before {
     content: "chevron_left";
+    z-index: 2;
   }
 }

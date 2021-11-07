@@ -59,7 +59,7 @@ export default function Layout(props) {
       {/* ↓overflow-hiddenはつかえない。position stickyが壊れる */}
       <div className="flex md:justify-center  relative ">
         <LeftNav />
-        <div>
+        <div id="pageTop">
           <Header pageTitle={props.pageTitle} />
           <main>{props.children}</main>
         </div>

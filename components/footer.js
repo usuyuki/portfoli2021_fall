@@ -3,6 +3,15 @@ import Link from "next/link";
 export default function Footer(props) {
   return (
     <footer className="mt-4 md:mt-24">
+      <div className="text-right relative -top-4 -left-4">
+        <Link href="#pageTop">
+          <a className="">
+            <span className="material-icons text-u_c_1 text-xl p-1   rounded-full bg-u_c_2 text-u_c_5">
+              arrow_upward
+            </span>
+          </a>
+        </Link>
+      </div>
       <div className="pt-4 pb-2 flex justify-center items-center flex-wrap flex-col md:flex-row ">
         <p className="mx-6 my-2">
           <Link href="/credit">
