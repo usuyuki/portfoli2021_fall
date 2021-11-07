@@ -3,6 +3,30 @@
  *
  * @format
  */
+
+/* Material+Iconsを自前に変更 */
+@font-face {
+  font-display: swap;
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"), url(/fonts/MaterialIconsRound-Regular.otf);
+}
+@font-face {
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Kiwi Maru";
+  src: url("/fonts/KiwiMaru-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Rampart One";
+  src: url("/fonts/RampartOne-Regular") format("ttf");
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -100,13 +124,6 @@ body {
   font-family: "Rampart One", cursive;
 }
 
-/* Material+Iconsを自前に変更 */
-@font-face {
-  font-family: "Material Icons";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Material Icons"), url(/fonts/MaterialIconsRound-Regular.otf);
-}
 .material-icons {
   font-family: "Material Icons";
   font-weight: normal;
