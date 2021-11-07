@@ -85,7 +85,7 @@ export default function Home({ data, allBlogsData }) {
         </div>
         <NormalButton href="works" title="もっと見る" />
         <Hr />
-        <h3 className="text-center text-3xl  mb-12 mx-4">最近かいた記事</h3>
+        <h3 className="text-center text-3xl  mb-12 mx-4">最近書いた記事</h3>
         <div className="">
           <BlogCards content={allBlogsData} />
         </div>
