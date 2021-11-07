@@ -18,12 +18,14 @@
   margin: 2em auto;
 }
 .thumbnail {
+  transform: rotate(20deg);
+}
+.thumbnail img {
   width: 150px;
   height: 150px;
   object-fit: cover;
   border-radius: 40px;
   margin-left: 20px;
-  transform: rotate(20deg);
 }
 .releaseWrapper {
   border: 4px dotted var(--u_c_1);
@@ -41,7 +43,7 @@
     width: auto;
     margin: 2em 2em;
   }
-  .thumbnail {
+  .thumbnail img {
     margin: 10px auto;
     margin-top: 0px;
   }

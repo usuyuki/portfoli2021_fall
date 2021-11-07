@@ -121,6 +121,9 @@ a:hover {
 }
 
 .top-image {
+  text-align: center;
+}
+.top-image img {
   width: 150px;
   height: 150px;
   /* サイズ揃える */
@@ -129,7 +132,7 @@ a:hover {
   filter: grayscale(100%);
   margin: 0 auto;
 }
-.top-image:hover {
+.top-image img:hover {
   filter: grayscale(0%);
   transition: 0.5s;
 }
@@ -141,12 +144,14 @@ a:hover {
   padding: 0.25em 0.5em;
   display: inline-block;
 }
-
 .archive-thumbnail {
+  text-align: center;
+}
+.archive-thumbnail img {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  margin: 0 auto;
+
   border-radius: 20px;
 }
 .link-button {
@@ -170,7 +175,7 @@ a:hover {
     max-width: 100vw;
     min-width: 100vw;
   }
-  .top-image {
+  .top-image img {
     filter: grayscale(0%);
   }
 }

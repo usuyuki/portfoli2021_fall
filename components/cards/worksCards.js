@@ -14,12 +14,13 @@ export default function WorksCards(props) {
             <Link href={"/works/" + value.id}>
               <a>
                 <div key={(counter_for_meta += 1)}>
-                  <Image
-                    width={500}
-                    height={500}
-                    className="top-image "
-                    src={props.image_urls[counter_for_meta]}
-                  />
+                  <div className="top-image ">
+                    <Image
+                      width={150}
+                      height={150}
+                      src={props.image_urls[counter_for_meta]}
+                    />
+                  </div>
                   <div className="flex justify-center">
                     <p className="my-2 mx-4 text-2xl">
                       {value.attributes.title}

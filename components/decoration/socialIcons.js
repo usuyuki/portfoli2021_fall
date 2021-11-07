@@ -13,8 +13,8 @@ export default function SocialIcons() {
           href="https://twitter.com/usuyuki26"
         >
           <Image
-            width={500}
-            height={500}
+            width={1034}
+            height={851}
             src="/img/icons/2021 Twitter logo - blue.png"
           />
         </a>
@@ -26,11 +26,7 @@ export default function SocialIcons() {
           rel="noopener noreferrer"
           href="https://github.com/Usuyuki"
         >
-          <Image
-            width={500}
-            height={500}
-            src="/img/icons/GitHub-Mark-64px.png"
-          />
+          <Image width={64} height={64} src="/img/icons/GitHub-Mark-64px.png" />
         </a>
       </div>
       {/* Youtube */}
@@ -41,8 +37,8 @@ export default function SocialIcons() {
           href="https://www.youtube.com/channel/UCI4-1pvH-0XdwfKZe4WBPhQ"
         >
           <Image
-            width={500}
-            height={500}
+            width={64}
+            height={45}
             src="/img/icons/youtube_social_icon_red.png"
           />
         </a>
@@ -54,7 +50,7 @@ export default function SocialIcons() {
           rel="noopener noreferrer"
           href="https://qiita.com/Usuyuki"
         >
-          <Image width={500} height={500} src="/img/icons/Qiita.png" />
+          <Image width={300} height={300} src="/img/icons/Qiita.png" />
         </a>
       </div>
       {/* Zenn */}
@@ -64,7 +60,7 @@ export default function SocialIcons() {
           rel="noopener noreferrer"
           href="https://zenn.dev/usuyuki"
         >
-          <Image width={500} height={500} src="/img/icons/Zenn.svg" />
+          <Image width={64} height={64} src="/img/icons/Zenn.svg" />
         </a>
       </div>
     </div>

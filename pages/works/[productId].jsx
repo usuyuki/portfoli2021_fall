@@ -100,12 +100,9 @@ export default function WorksIndividual({ data }) {
             </div>
           </div>
           <div className="w-full md:w-1/4 order-1 md:order-3">
-            <Image
-              width={500}
-              height={500}
-              className={styles.thumbnail}
-              src={image_thumbnail}
-            />
+            <div className={styles.thumbnail}>
+              <Image width={150} height={150} src={image_thumbnail} />
+            </div>
           </div>
         </div>
         <div className="flex justify-center flex-wrap">
