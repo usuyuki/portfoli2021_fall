@@ -170,7 +170,7 @@ export default function Home({ history, tech_stack }) {
             <p className="">Grade:B2</p>
             <p className="">Major:Information science</p>
           </AboutMeFrame>
-          <AboutMeFrame icon="cottage">
+          <AboutMeFrame icon="home">
             <p className="">Birthplace:Tottori Prefecture</p>
             <p className="">Hometown:Shimane Prefecture</p>
             <p className="">Residence:Tochigi Prefecture</p>

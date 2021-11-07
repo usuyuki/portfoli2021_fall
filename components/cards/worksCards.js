@@ -8,7 +8,7 @@ export default function WorksCards(props) {
       {props.content.data.map((value, key) => {
         return (
           <div
-            className="cursor-pointer link-item p-4 w-1/2 md:w-1/5"
+            className="cursor-pointer link-item p-4 w-1/2 lg:w-1/5"
             key={key}
           >
             <Link href={"/works/" + value.id}>
