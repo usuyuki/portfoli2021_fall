@@ -25,11 +25,11 @@ export default function Layout(props) {
           content="うすゆきのポートフォリオです。"
         />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pf.usuyuki.net/" />
         <meta
-          property="og:url"
-          content="https://usuyukiportfolio.vercel.app/"
+          property="og:image"
+          content="https://pf.usuyuki.net//img/ogp.png"
         />
-        <meta property="og:image" content="/img/ogp.png" />
         {/* <meta property="fb:app_id"      content="" /> */}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@usuyuki26" />
@@ -40,10 +40,10 @@ export default function Layout(props) {
           rel="stylesheet"
         />
         {/* まてりある */}
-        <link
+        {/* <link
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet"
-        />
+        /> */}
         {/* ふぁびこん */}
         <link
           rel="apple-touch-icon"

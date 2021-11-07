@@ -6,7 +6,7 @@ export default function BlogCards(props) {
       {props.content.map((value, key) => {
         return (
           <div
-            className="cursor-pointer link-item p-4 w-1/2 md:w-1/5"
+            className="cursor-pointer link-item p-4 w-1/2 lg:w-1/5"
             key={key}
           >
             <a target="_blank" rel="noopener noreferrer" href={value.link}>
