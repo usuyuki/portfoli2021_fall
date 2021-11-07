@@ -2,6 +2,7 @@
 
 import Layout from "../components/layout";
 import Heading1 from "../components/decoration/heading1";
+import AboutMeFrame from "../components/frames/aboutMeFrame";
 import TimelineLayout from "../components/frames/timelineLayout";
 import TechStackLayout from "../components/frames/techStackLayout";
 
@@ -163,19 +164,17 @@ export default function Home({ history, tech_stack }) {
       <Layout title_prefix={title_prefix} pageTitle={pageTitle}>
         <div>
           <h2 className="text-center my-4 mx-4 text-3xl">うすゆき</h2>
-          <div className="flex justify-center">
-            <div className="w-full md:w-1/2">
-              <p className="">Age:19</p>
-            </div>
-            <div className="w-full md:w-1/2">
-              <span className=" material-icons text-center inline-block">
-                cottage
-              </span>
-              <p className="">Birthplace:Tottori Prefecture</p>
-              <p className="">Hometown:Shimane Prefecture</p>
-              <p className="">Residence:Tochigi Prefecture</p>
-            </div>
-          </div>
+          <AboutMeFrame icon="face">
+            <p className="">Age:19</p>
+            <p className="">Utsunomiya University</p>
+            <p className="">Grade:B2</p>
+            <p className="">Major:Information science</p>
+          </AboutMeFrame>
+          <AboutMeFrame icon="cottage">
+            <p className="">Birthplace:Tottori Prefecture</p>
+            <p className="">Hometown:Shimane Prefecture</p>
+            <p className="">Residence:Tochigi Prefecture</p>
+          </AboutMeFrame>
         </div>
         <div className="">
           <article>

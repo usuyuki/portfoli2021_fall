@@ -143,6 +143,14 @@ a:hover {
   border-radius: 4px;
   padding: 0.25em 0.5em;
   display: inline-block;
+  transition: 0.5s;
+}
+.genre-tag a:hover {
+  color: var(--u_c_1);
+}
+.genre-tag:hover {
+  background-color: var(--usuyuki_black);
+  transition: 0.5s;
 }
 .archive-thumbnail {
   text-align: center;
