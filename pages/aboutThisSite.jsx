@@ -1,63 +1,49 @@
 /** @format */
 
 import Layout from "../components/layout";
-import Heading1 from "../components/decoration/heading1";
-import CreditFrame from "../components/frames/creditFrame";
+import Hr from "../components/decoration/hr";
+
 // レンダリング前に実行される
 
 export default function Credit() {
-  let title_prefix = "Credit";
-  let pageTitle = "Credit";
+  let title_prefix = "このサイトについて";
+  let pageTitle = "aboutThisSite";
   // const { data, error } = useSWR("https://usuyuki.net/jsonapi/node/link");
   // const [data, setData] = useState({ message: "", data: [] })
 
   return (
     <div>
       <Layout title_prefix={title_prefix} pageTitle={pageTitle}>
-        <h3 className="text-center text-3xl mt-24 mb-4 mx-4">くれじっと</h3>
-
-        <Heading1 title={"Library"} />
-        <CreditFrame
-          title="NEXT.js"
-          copyright="Copyright (c) 2021 Vercel, Inc."
-          license="MIT"
-          description="このページを動かしています。"
-          licenseLink="https://github.com/vercel/next.js/blob/canary/license.md"
-          productLink="https://nextjs.org/"
-        />
-        <CreditFrame
-          title="tailwindcss"
-          copyright="Copyright (c) Adam Wathan <adam.wathan@gmail.com>,Copyright (c) Jonathan Reinink <jonathan@reinink.ca>"
-          license="MIT"
-          description="CSSライブラリとして使用しています。"
-          licenseLink="https://github.com/tailwindlabs/tailwindcss/blob/master/LICENSE"
-          productLink="https://tailwindcss.com/"
-        />
-        <CreditFrame
-          title="Drupal"
-          license="GNU General Public License v2.0"
-          copyright=""
-          description="Worksを管理するためのAPIとして利用しているCMSです。"
-          licenseLink="https://www.drupal.org/about/licensing#drupal-license"
-          productLink="https://www.drupal.org/"
-        />
-        <Heading1 title={"画像"} />
-        <CreditFrame
-          title="DEVICON"
-          license="MIT"
-          copyright="Copyright (c) 2015 konpa"
-          description="Profileページでの技術スタックアイコンにて使用しています。"
-          licenseLink="https://github.com/devicons/devicon/blob/master/LICENSE"
-          productLink="https://devicon.dev/"
-        />
-        <CreditFrame
-          title="grass-graph"
-          license="不明"
-          copyright="Copyright © 2016　A-Know / Moshimo-Works All Rights Are Reserved."
-          description="トップページでのGitHubの草を表示に使用しています。"
-          licenseLink=""
-          productLink="https://grass-graph.appspot.com/"
-        />
+        <p className="text-center mx-2 my-12 text-xl">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/Usuyuki/portfoli2021_fall"
+            className="text-center"
+          >
+            GitHubリポジトリ
+          </a>
+        </p>
+        <Hr />
+        <div className="my-12 flex justify-center ">
+          <p className="mx-2 md:w-1/2 ">
+            本サイトでは「GoogleAnalytics」を利用しています。
+            このGoogleAnalyticsはトラフィックデータの収集のためにクッキー（Cookie）を使用しております。
+            トラフィックデータは匿名で収集されており、個人を特定するものではありません。
+            この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。
+          </p>
+        </div>
+        <p className="text-center mx-2 my-12 text-sm">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://policies.google.com/technologies/partner-sites?hl=ja"
+            className="text-center"
+          >
+            Googleのサービスを使用するサイトやアプリから収集した情報のGoogleによる使用
+          </a>
+        </p>
+        <Hr />
       </Layout>
     </div>
   );
