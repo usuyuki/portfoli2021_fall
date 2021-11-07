@@ -26,14 +26,14 @@ export default function Credit() {
         </p>
         <Hr />
         <div className="my-12 flex justify-center ">
-          <p className="mx-2 md:w-1/2 ">
+          <p className="mx-8 md:w-1/2 ">
             本サイトでは「GoogleAnalytics」を利用しています。
             このGoogleAnalyticsはトラフィックデータの収集のためにクッキー（Cookie）を使用しております。
             トラフィックデータは匿名で収集されており、個人を特定するものではありません。
             この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。
           </p>
         </div>
-        <p className="text-center mx-2 my-12 text-sm">
+        <p className="text-center mx-8 my-12 text-sm">
           <a
             target="_blank"
             rel="noopener noreferrer"

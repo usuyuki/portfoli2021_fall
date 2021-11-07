@@ -14,7 +14,9 @@ export default function Credit() {
   return (
     <div>
       <Layout title_prefix={title_prefix} pageTitle={pageTitle}>
-        <h3 className="text-center text-3xl mt-24 mb-4 mx-4">くれじっと</h3>
+        <h3 className="text-center text-3xl mt-24 pb-12 md:pb-0 mb-4 mx-4">
+          くれじっと
+        </h3>
 
         <Heading1 title={"Library"} />
         <CreditFrame

@@ -67,7 +67,7 @@ export default function WorksIndividual({ data }) {
   return (
     <div>
       <Layout title_prefix={title_prefix} pageTitle={pageTitle}>
-        <div className="flex justify-center items-center my-24 flex-col md:flex-row">
+        <div className="flex justify-center items-center mt-12 mb-4 lg:my-24 flex-col md:flex-row">
           <div className="w-full md:w-1/4 order-3 md:order-1">
             {data.data.attributes.field_works_link != null
               ? data.data.attributes.field_works_link.map((value, key) => (
@@ -86,7 +86,7 @@ export default function WorksIndividual({ data }) {
           <div className="w-full md:w-1/2 order-2">
             <p className="text-center my-2">{work_scale}</p>
             <div className="flex items-center justify-center">
-              <h1 className="font-rampart text-6xl mx-4">
+              <h1 className="font-rampart text-6xl mx-4 break-all">
                 {data.data.attributes.title}
               </h1>
             </div>
