@@ -14,8 +14,8 @@ export default function WorksGallery(props) {
         }
         @media screen and (max-width: 599px) {
           /* スマホ */
-          .gallery-content img {
-            width: 75%;
+          .gallery-content {
+            width: 100%;
             height: auto;
           }
         }
