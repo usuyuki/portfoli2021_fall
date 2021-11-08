@@ -8,7 +8,7 @@ export default function WorksCards(props) {
       {props.content.data.map((value, key) => {
         return (
           <div
-            className="cursor-pointer link-item p-4 w-full lg:w-1/5"
+            className="cursor-pointer link-item p-4 w-full md:w-1/3 lg:w-1/5"
             key={key}
           >
             <Link href={"/works/" + value.id}>
@@ -22,9 +22,9 @@ export default function WorksCards(props) {
                     />
                   </div>
                   <div className="flex justify-center">
-                    <p className="my-2 px-4 text-2xl">
+                    <h4 className="my-2 px-4 text-2xl break-all">
                       {value.attributes.title}
-                    </p>
+                    </h4>
                   </div>
                 </div>
               </a>

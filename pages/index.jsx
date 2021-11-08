@@ -49,7 +49,7 @@ export default function Home({ data, allBlogsData }) {
             最近はキャラメルポップコーンをよく食べます。
           </p>
         </div>
-        <div className="md:mx-auto my-12 px-4 text-center">
+        <div className="lg:mx-auto my-12 px-4 text-center">
           <Image
             width={870}
             height={155}
@@ -57,14 +57,14 @@ export default function Home({ data, allBlogsData }) {
           />
         </div>
         <div className="flex justify-center flex-wrap">
-          <div className="px-6 md:px-6 my-4 ">
+          <div className="px-6 lg:px-6 my-4 ">
             <Image
               width={340}
               height={200}
               src="https://raw.githubusercontent.com/Usuyuki/Usuyuki/master/profile-summary-card-output/solarized/2-most-commit-language.svg"
             />
           </div>
-          <div className="px-6 md:px-6 my-4 ">
+          <div className="px-6 lg:px-6 my-4 ">
             <Image
               width={340}
               height={200}

@@ -20,7 +20,7 @@ export default function WorksGallery(props) {
           }
         }
       `}</style>
-      <div className="flex items-center justify-center flex-wrap mx-4 md:mx-24">
+      <div className="flex items-center justify-center flex-wrap mx-4 lg:mx-24">
         {props.image_urls.map((value, key) => {
           return (
             <div className="gallery-content" key={key}>

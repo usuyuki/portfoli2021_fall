@@ -11,6 +11,7 @@
   justify-content: center;
   transform: rotate(-45deg);
   font-size: 1.25em;
+  word-break: break-word;
 }
 
 .works_description {
@@ -34,7 +35,7 @@
   margin: 1em auto;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
   /* スマホ */
   .url_bar {
     transform: rotate(0deg);

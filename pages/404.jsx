@@ -21,7 +21,7 @@ export default function Custom404() {
           このページは見つかりませんでした
         </h2>
         <Heading1 title={"からー"} />
-        <div className="flex flex-wrap justify-center mx-2 md:mx-40">
+        <div className="flex flex-wrap justify-center mx-2 lg:mx-40">
           <ColorPalette color={"u_c_1"} />
           <ColorPalette color={"u_c_2"} />
           <ColorPalette color={"u_c_3"} />

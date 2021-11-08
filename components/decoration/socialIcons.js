@@ -4,7 +4,7 @@
 import Image from "next/image";
 export default function SocialIcons() {
   return (
-    <div className="flex my-12 mx-2 md:mx-20 items-center justify-center flex-wrap">
+    <div className="flex my-12 mx-2 lg:mx-20 items-center justify-center flex-wrap">
       {/* Twitter */}
       <div className="w-16 h-auto p-4">
         <a

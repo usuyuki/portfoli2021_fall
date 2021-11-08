@@ -14,7 +14,7 @@ export default function Credit() {
   return (
     <div>
       <Layout title_prefix={title_prefix} pageTitle={pageTitle}>
-        <h3 className="text-center text-3xl mt-24 pb-12 md:pb-0 mb-4 mx-4">
+        <h3 className="text-center text-3xl mt-24 pb-12 lg:pb-0 mb-4 mx-4">
           くれじっと
         </h3>
 
@@ -59,6 +59,15 @@ export default function Credit() {
           description="トップページでのGitHubの草を表示に使用しています。"
           licenseLink="https://grass-graph.appspot.com/"
           productLink="https://grass-graph.appspot.com/"
+        />
+        <Heading1 title={"カラー"} />
+        <CreditFrame
+          title="和風カラーパレット 10 卯の花"
+          license="なし"
+          copyright="@neohimeism"
+          description="このサイトのカラーパレットとして採用させていただいております。"
+          licenseLink="https://twitter.com/neohimeism"
+          productLink="https://twitter.com/neohimeism/status/1356211042108497920"
         />
         <Heading1 title={"フォント"} />
         <CreditFrame
