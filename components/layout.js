@@ -57,13 +57,13 @@ export default function Layout(props) {
         />
       </Head>
       {/* ↓overflow-hiddenはつかえない。position stickyが壊れる */}
-      <div className="flex md:justify-center  relative ">
+      <div className="flex lg:justify-center  relative ">
         <LeftNav />
         <div id="pageTop">
           <Header pageTitle={props.pageTitle} />
           <main>{props.children}</main>
         </div>
-        <div className="hidden md:block" style={{ width: "126px" }}></div>
+        <div className="hidden lg:block" style={{ width: "126px" }}></div>
       </div>
       <Footer />
     </div>

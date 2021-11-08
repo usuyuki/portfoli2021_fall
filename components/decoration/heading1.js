@@ -10,7 +10,7 @@ export default function Heading1(props) {
           height: 2px;
         }
       `}</style>
-      <div className="flex my-12 mx-2 md:mx-20 items-center ">
+      <div className="flex my-12 mx-2 lg:mx-20 items-center ">
         <h3 className="transform -rotate-45 text-3xl">{props.title}</h3>
         <div className="heading-bar"></div>
       </div>

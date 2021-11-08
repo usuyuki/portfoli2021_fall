@@ -4,7 +4,7 @@ export default function WorksGenres(props) {
   let shifter = -50;
   return (
     <div className="text-center">
-      <div className="mx-4 md:mx-8 my-4 inline-block">
+      <div className="mx-4 lg:mx-8 my-4 inline-block">
         {/* ひし形によるまるみある三角形 */}
         <style jsx>{`
           .genre-wrapper {

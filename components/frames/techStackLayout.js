@@ -2,7 +2,7 @@
 
 export default function TechStackLayout(props) {
   return (
-    <div className="flex  flex-wrap p-2  mx-4 md:mx-80">
+    <div className="flex  flex-wrap p-2  mx-4 lg:mx-80">
       {props.content.map((value, key) => {
         return (
           <div className="bg-u_c_2 p-4 rounded-xl m-4 shadow-md" key={key}>

@@ -3,11 +3,11 @@ import removeHTMLTag from "../../lib/removeHTMLTag";
 export default function TimelineLayout(props) {
   return (
     <div className="container">
-      <div className="flex flex-col md:grid grid-cols-9 mx-auto p-2 text-usuyuki-white">
+      <div className="flex flex-col lg:grid grid-cols-9 mx-auto p-2 text-usuyuki-white">
         {props.content.map((value, key) => {
           return (
-            <div className="flex md:contents" key={key}>
-              <div className="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+            <div className="flex lg:contents" key={key}>
+              <div className="col-start-5 col-end-6 mr-10 lg:mx-auto relative">
                 <div className="h-full w-6 flex items-center justify-center">
                   <div className="h-full w-1 bg-u_c_1 pointer-events-none"></div>
                 </div>
