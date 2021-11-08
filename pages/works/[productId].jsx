@@ -121,26 +121,38 @@ export default function WorksIndividual({ data }) {
           <div className="w-full lg:w-1/2 ">
             <WorksGenres genre_names={genre_names} />
           </div>
-          {is_iframe ? (
-            <div className="w-full flex justify-center">
-              <iframe
-                src={data.data.attributes.field_works_yt.uri}
-                loading="lazy"
-                width="560"
-                height="315"
-              ></iframe>
+        </div>
+        {is_iframe ? (
+          <div className="flex justify-center flex-wrap">
+            <div className="w-full  ">
+              <Heading1 title={"動画"} />
+              <div className="flex justify-center">
+                <iframe
+                  src={data.data.attributes.field_works_yt.uri}
+                  loading="lazy"
+                  width="560"
+                  height="315"
+                ></iframe>
+              </div>
             </div>
-          ) : (
+            <div className="w-full  ">
+              <Heading1 title={"技術"} />
+              <WorksTechs tech_names={tech_names} />
+            </div>
+          </div>
+        ) : (
+          <div className="flex justify-center flex-wrap">
             <div className="w-full lg:w-1/2 ">
               <Heading1 title={"画像"} />
               <WorksGallery image_urls={image_urls} />
             </div>
-          )}
-          <div className="w-full lg:w-1/2 ">
-            <Heading1 title={"技術"} />
-            <WorksTechs tech_names={tech_names} />
+
+            <div className="w-full lg:w-1/2 ">
+              <Heading1 title={"技術"} />
+              <WorksTechs tech_names={tech_names} />
+            </div>
           </div>
-        </div>
+        )}
       </Layout>
     </div>
   );
