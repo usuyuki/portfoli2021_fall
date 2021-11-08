@@ -45,7 +45,7 @@ export default function WorksIndividual({ data }) {
   const year = date[0];
   const month = date[1];
   const day = date[2];
-
+  let is_iframe = false;
   data.included.forEach((element) => {
     if (element.type == "file--file") {
       //1枚目にサムネが来るので
@@ -57,6 +57,9 @@ export default function WorksIndividual({ data }) {
       image_urls.push("https://usuyuki.net/" + element.attributes.uri.url);
     } else if (element.type == "taxonomy_term--works_genre") {
       genre_names[element.id] = element.attributes.name;
+      if (element.id == "e9fc047c-4c12-4ce0-a2a2-45d6d900153a") {
+        is_iframe = true;
+      }
     } else if (element.type == "taxonomy_term--works_tech") {
       tech_names[element.id] = element.attributes.name;
     } else if (element.type == "taxonomy_term--work_scale") {
@@ -118,10 +121,21 @@ export default function WorksIndividual({ data }) {
           <div className="w-full md:w-1/2 ">
             <WorksGenres genre_names={genre_names} />
           </div>
-          <div className="w-full md:w-1/2 ">
-            <Heading1 title={"画像"} />
-            <WorksGallery image_urls={image_urls} />
-          </div>
+          {is_iframe ? (
+            <div className="w-full flex justify-center">
+              <iframe
+                src={data.data.attributes.field_works_yt.uri}
+                loading="lazy"
+                width="560"
+                height="315"
+              ></iframe>
+            </div>
+          ) : (
+            <div className="w-full md:w-1/2 ">
+              <Heading1 title={"画像"} />
+              <WorksGallery image_urls={image_urls} />
+            </div>
+          )}
           <div className="w-full md:w-1/2 ">
             <Heading1 title={"技術"} />
             <WorksTechs tech_names={tech_names} />
