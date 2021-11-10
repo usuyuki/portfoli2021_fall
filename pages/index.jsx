@@ -55,6 +55,7 @@ export default function Home({ data, allBlogsData }) {
             height={155}
             src="https://grass-graph.appspot.com/images/Usuyuki.png"
           />
+          <p className="mb-4 mx-2">---GitHubコミット状況---</p>
         </div>
         <div className="flex justify-center flex-wrap">
           <div className="px-6 lg:px-6 my-4 ">
@@ -71,6 +72,9 @@ export default function Home({ data, allBlogsData }) {
               src="https://raw.githubusercontent.com/Usuyuki/Usuyuki/master/profile-summary-card-output/solarized/1-repos-per-language.svg"
             />
           </div>
+          <p className="w-full text-center mb-4 mx-2">
+            ---GitHubでの言語グラフ---
+          </p>
         </div>
 
         <SocialIcons />
@@ -83,7 +87,7 @@ export default function Home({ data, allBlogsData }) {
             genre_names={genre_names}
           />
         </div>
-        <NormalButton href="works" title="もっと見る" />
+        <NormalButton href="/works" title="もっと見る" />
         <Hr />
         <h3 className="text-center text-3xl  mb-12 mx-4">最近書いた記事</h3>
         <div className="">
