@@ -3,36 +3,56 @@
 import Layout from "../components/layout";
 import Image from "next/image";
 import WorksCards from "../components/cards/worksCards";
+import FeatureWorksCards from "../components/cards/featureWorksCards";
+import BlogCards from "../components/cards/blogCards";
 import SocialIcons from "../components/decoration/socialIcons";
 import NormalButton from "../components/button/normalButton";
-import BlogCards from "../components/cards/blogCards";
 import Hr from "../components/decoration/hr";
 import { getBlogsSortedPostsData } from "../lib/WPBlogs";
 
 export const getStaticProps = async () => {
-  const [response1, response2] = await Promise.all([
+  const [response1, response2, response3] = await Promise.all([
     fetch(
       "https://usuyuki.net/jsonapi/node/works?sort=-created&include=field_works_thumbnail,field_works_genre&page[limit]=5"
+    ).then((r) => r.json()),
+    fetch(
+      "https://usuyuki.net/jsonapi/node/works?sort=-changed&include=field_works_thumbnail,field_works_genre&filter[field_works_featured_on_pf]=1"
     ).then((r) => r.json()),
     getBlogsSortedPostsData(),
   ]);
 
-  const data = response1;
-  const allBlogsData = response2;
-  return { props: { data, allBlogsData }, revalidate: 120 };
+  const latestWorks = response1;
+  const featuredWorks = response2;
+  const allBlogsData = response3;
+  return {
+    props: { latestWorks, featuredWorks, allBlogsData },
+    revalidate: 120,
+  };
 };
 
-export default function Home({ data, allBlogsData }) {
+export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
   let title_prefix = "ホーム";
   let pageTitle = "usuyuki portfolio";
 
   let image_urls = []; //urlの配列
+  let image_urls_featured = []; //urlの配列
   let genre_names = {}; //[ジャンルid]=ジャンル名
 
-  //画像取得
-  data.included.forEach((element) => {
+  //画像とジャンル取得
+  latestWorks.included.forEach((element) => {
     if (element.type == "file--file") {
       image_urls.push("https://usuyuki.net/" + element.attributes.uri.url);
+    } else if (element.type == "taxonomy_term--works_genre") {
+      genre_names[element.id] = element.attributes.name;
+    }
+  });
+
+  //画像とジャンル取得
+  featuredWorks.included.forEach((element) => {
+    if (element.type == "file--file") {
+      image_urls_featured.push(
+        "https://usuyuki.net/" + element.attributes.uri.url
+      );
     } else if (element.type == "taxonomy_term--works_genre") {
       genre_names[element.id] = element.attributes.name;
     }
@@ -55,6 +75,7 @@ export default function Home({ data, allBlogsData }) {
             height={155}
             src="https://grass-graph.appspot.com/images/Usuyuki.png"
           />
+          <p className="mb-4 mx-2">---GitHubコミット状況---</p>
         </div>
         <div className="flex justify-center flex-wrap">
           <div className="px-6 lg:px-6 my-4 ">
@@ -71,19 +92,31 @@ export default function Home({ data, allBlogsData }) {
               src="https://raw.githubusercontent.com/Usuyuki/Usuyuki/master/profile-summary-card-output/solarized/1-repos-per-language.svg"
             />
           </div>
+          <p className="w-full text-center mb-4 mx-2">
+            ---GitHubでの言語グラフ---
+          </p>
         </div>
 
         <SocialIcons />
         <Hr />
+        <h3 className="text-center text-3xl mb-12 mx-4">目玉商品</h3>
+        <div className="">
+          <FeatureWorksCards
+            content={featuredWorks}
+            image_urls_featured={image_urls_featured}
+            genre_names={genre_names}
+          />
+        </div>
+        <Hr />
         <h3 className="text-center text-3xl mb-12 mx-4">最近つくったもの</h3>
         <div className="">
           <WorksCards
-            content={data}
+            content={latestWorks}
             image_urls={image_urls}
             genre_names={genre_names}
           />
         </div>
-        <NormalButton href="works" title="もっと見る" />
+        <NormalButton href="/works" title="もっと見る" />
         <Hr />
         <h3 className="text-center text-3xl  mb-12 mx-4">最近書いた記事</h3>
         <div className="">
