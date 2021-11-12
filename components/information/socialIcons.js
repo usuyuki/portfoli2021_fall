@@ -5,9 +5,7 @@ import Image from "next/image";
 export default function SocialIcons() {
   return (
     <div>
-      <p className="text-center mt-12 mx-2">---SNSなどなど---</p>
-
-      <div className="flex mb-12 mx-2 lg:mx-20 items-center justify-center flex-wrap">
+      <div className="flex mt-20  mx-2 lg:mx-20 items-center justify-center flex-wrap">
         {/* Twitter */}
         <div className="w-16 h-auto p-4">
           <a
@@ -70,6 +68,10 @@ export default function SocialIcons() {
             <Image width={64} height={64} src="/img/icons/Zenn.svg" />
           </a>
         </div>
+      </div>
+      <div className="flex items-center  mb-12 mx-2 justify-center flex-wrap ">
+        <span class="material-icons">chat_bubble</span>
+        <p className="">SNSなど</p>
       </div>
     </div>
   );
