@@ -17,7 +17,9 @@ export default function Credit() {
         <h3 className="text-center text-3xl mt-24 pb-12 lg:pb-0 mb-4 mx-4">
           くれじっと
         </h3>
-
+        <p className="text-center text-xl mb-4 mx-4">
+          ※ライセンスが不明となっている箇所は、勝手に使用しているのではなく、具体的なライセンスが記載されていないため「不明」としています。
+        </p>
         <Heading1 title={"Library"} />
         <CreditFrame
           title="NEXT.js"
@@ -45,20 +47,36 @@ export default function Credit() {
         />
         <Heading1 title={"画像"} />
         <CreditFrame
-          title="DEVICON"
-          license="MIT"
-          copyright="Copyright (c) 2015 konpa"
-          description="Profileページでの技術スタックアイコンにて使用しています。"
-          licenseLink="https://github.com/devicons/devicon/blob/master/LICENSE"
-          productLink="https://devicon.dev/"
-        />
-        <CreditFrame
           title="grass-graph"
           license="不明"
           copyright="Copyright © 2016　A-Know / Moshimo-Works All Rights Are Reserved."
           description="トップページでのGitHubの草を表示に使用しています。"
           licenseLink="https://grass-graph.appspot.com/"
           productLink="https://grass-graph.appspot.com/"
+        />
+        <CreditFrame
+          title="github-profile-summary-cards "
+          license="MIT"
+          copyright="Copyright (c) 2020 VN7"
+          description="トップページでのGitHubの言語情報表示に使用しています。"
+          licenseLink="https://github.com/vn7n24fzkq/github-profile-summary-cards/blob/master/LICENSE"
+          productLink="https://github.com/vn7n24fzkq/github-profile-summary-cards"
+        />
+        <CreditFrame
+          title="ICOOON MONO"
+          license="不明"
+          copyright="© Copyright TopeconHeroes !"
+          description="トップページでの人形ピクトグラムに使用しています。"
+          licenseLink="https://icooon-mono.com/license/"
+          productLink="https://icooon-mono.com/"
+        />
+        <CreditFrame
+          title="DEVICON"
+          license="MIT"
+          copyright="Copyright (c) 2015 konpa"
+          description="Profileページでの技術スタックアイコンにて使用しています。"
+          licenseLink="https://github.com/devicons/devicon/blob/master/LICENSE"
+          productLink="https://devicon.dev/"
         />
         <Heading1 title={"カラー"} />
         <CreditFrame

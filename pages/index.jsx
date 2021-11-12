@@ -5,7 +5,8 @@ import Image from "next/image";
 import WorksCards from "../components/cards/worksCards";
 import FeatureWorksCards from "../components/cards/featureWorksCards";
 import BlogCards from "../components/cards/blogCards";
-import SocialIcons from "../components/decoration/socialIcons";
+import SocialIcons from "../components/information/socialIcons";
+import MyComponent from "../components/information/myComponent";
 import NormalButton from "../components/button/normalButton";
 import Hr from "../components/decoration/hr";
 import { getBlogsSortedPostsData } from "../lib/WPBlogs";
@@ -69,13 +70,18 @@ export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
             最近はキャラメルポップコーンをよく食べます。
           </p>
         </div>
+        <MyComponent />
         <div className="lg:mx-auto my-12 px-4 text-center">
           <Image
             width={870}
             height={155}
             src="https://grass-graph.appspot.com/images/Usuyuki.png"
           />
-          <p className="mb-4 mx-2">---GitHubコミット状況---</p>
+
+          <div className="flex items-center mb-4 mx-2 justify-center flex-wrap ">
+            <span class="material-icons">grass</span>
+            <p className="">GitHubコミット状況</p>
+          </div>
         </div>
         <div className="flex justify-center flex-wrap">
           <div className="px-6 lg:px-6 my-4 ">
@@ -92,9 +98,10 @@ export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
               src="https://raw.githubusercontent.com/Usuyuki/Usuyuki/master/profile-summary-card-output/solarized/1-repos-per-language.svg"
             />
           </div>
-          <p className="w-full text-center mb-4 mx-2">
-            ---GitHubでの言語グラフ---
-          </p>
+        </div>
+        <div className="flex items-center mb-4 mx-2 justify-center flex-wrap ">
+          <span class="material-icons">signal_cellular_alt</span>
+          <p className="">GitHubでの言語グラフ</p>
         </div>
 
         <SocialIcons />
