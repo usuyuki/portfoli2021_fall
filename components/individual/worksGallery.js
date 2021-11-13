@@ -1,8 +1,28 @@
 /** @format */
 import Image from "next/image";
+import SwiperCore, { Autoplay, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+
+SwiperCore.use([Autoplay, Pagination]);
+
 export default function WorksGallery(props) {
+  const params = {
+    //Swiperの設定
+    initialSlide: 0,
+    spaceBetween: 10,
+    slidesPerView: 1.25,
+    pagination: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+  };
   return (
-    <div>
+    <div className="">
       <style jsx>{`
         .gallery-content {
           padding: 10px;
@@ -19,16 +39,26 @@ export default function WorksGallery(props) {
             height: auto;
           }
         }
+
+        .gallery-content img {
+          cursor: pointer;
+        }
       `}</style>
-      <div className="flex items-center justify-center flex-wrap mx-4 lg:mx-24">
+      {/* {ua=="pc"?():()} */}
+      <Swiper tag="nav" {...params}>
         {props.image_urls.map((value, key) => {
           return (
-            <div className="gallery-content" key={key}>
-              <Image width={500} height={500} src={value} objectFit="cover" />
-            </div>
+            <SwiperSlide key={key}>
+              <Image
+                width={2000}
+                height={2000}
+                src={value}
+                objectFit="contain"
+              />
+            </SwiperSlide>
           );
         })}
-      </div>
+      </Swiper>
     </div>
   );
 }

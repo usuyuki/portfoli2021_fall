@@ -68,6 +68,26 @@ export default function SocialIcons() {
             <Image width={64} height={64} src="/img/icons/Zenn.svg" />
           </a>
         </div>
+        {/* どくめ */}
+        <div className="w-16 h-auto p-4">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://bookmeter.com/users/1141982"
+          >
+            <Image width={64} height={64} src="/img/icons/dokumeFuu.png" />
+          </a>
+        </div>
+        {/* Kaggle */}
+        <div className="w-16 h-auto p-4">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.kaggle.com/usuyuki"
+          >
+            <Image width={64} height={64} src="/img/icons/kaggle-icon.svg" />
+          </a>
+        </div>
       </div>
       <div className="flex items-center  mb-12 mx-2 justify-center flex-wrap ">
         <span class="material-icons">chat_bubble</span>
