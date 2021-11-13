@@ -19,8 +19,8 @@ export default function WorksGallery(props) {
   const params = {
     //Swiperの設定
     initialSlide: 0,
-    spaceBetween: 40,
-    slidesPerView: 1.5,
+    spaceBetween: 10,
+    slidesPerView: 1.25,
     // navigation: true,
     // Pagination: {
     //   el: ".swiper-pagination",
@@ -57,11 +57,17 @@ export default function WorksGallery(props) {
           cursor: pointer;
         }
       `}</style>
+      {/* {ua=="pc"?():()} */}
       <Swiper tag="nav" {...params}>
         {props.image_urls.map((value, key) => {
           return (
             <SwiperSlide key={key}>
-              <Image width={1920} height={1080} src={value} objectFit="cover" />
+              <Image
+                width={2000}
+                height={2000}
+                src={value}
+                objectFit="contain"
+              />
             </SwiperSlide>
           );
         })}
