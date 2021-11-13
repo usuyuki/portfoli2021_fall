@@ -38,6 +38,8 @@ html {
   --u_c_3: #e7f2f6;
   --u_c_4: #9cd9d4;
   --u_c_5: #126c6d;
+  --swiper-theme-color: var(--u_c_5) !important;
+  --swiper-pagination-bullet-inactive-color: var(--u_c_5) !important;
 }
 
 .bg-usuyuki_white {

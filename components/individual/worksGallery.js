@@ -1,19 +1,11 @@
 /** @format */
 import Image from "next/image";
-import SwiperCore, {
-  Autoplay,
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-} from "swiper";
+import SwiperCore, { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
-SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, A11y]);
+SwiperCore.use([Autoplay, Pagination]);
 
 export default function WorksGallery(props) {
   const params = {
@@ -21,12 +13,7 @@ export default function WorksGallery(props) {
     initialSlide: 0,
     spaceBetween: 10,
     slidesPerView: 1.25,
-    // navigation: true,
-    // Pagination: {
-    //   el: ".swiper-pagination",
-    //   clickable: true,
-    // },
-    scrollbar: true,
+    pagination: true,
     centeredSlides: true,
     autoplay: {
       delay: 3000,
@@ -35,7 +22,7 @@ export default function WorksGallery(props) {
     loop: true,
   };
   return (
-    <div className="o">
+    <div className="">
       <style jsx>{`
         .gallery-content {
           padding: 10px;
