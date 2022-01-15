@@ -2,7 +2,7 @@
 .leftNav_line {
   background-color: var(--u_c_5);
   width: 4px;
-  height: 290px;
+  height: 380px;
   margin-right: 10px;
 }
 
@@ -24,6 +24,10 @@
 
 @media screen and (max-width: 599px) {
   /* スマホ */
+  /* .portfolio_menu a {
+    font-size: 1.4em;
+    margin: 0.25em 0;
+  } */
   .portfolio_menu {
     width: 0px;
     transition: 0.5s;

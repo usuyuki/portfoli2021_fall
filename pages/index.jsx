@@ -67,19 +67,24 @@ export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
           <p className="text-xl mx-4">
             うすゆきと申します。
             <br />
-            最近はキャラメルポップコーンをよく食べます。
+            ポートフォリオってやつです。
           </p>
         </div>
         <MyComponent />
         <div className="lg:mx-auto my-12 px-4 text-center">
-          <Image
-            width={870}
-            height={155}
-            src="https://grass-graph.appspot.com/images/Usuyuki.png"
-          />
-
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/Usuyuki"
+          >
+            <Image
+              width={870}
+              height={155}
+              src="https://grass-graph.appspot.com/images/Usuyuki.png"
+            />
+          </a>
           <div className="flex items-center mb-4 mx-2 justify-center flex-wrap ">
-            <span class="material-icons">grass</span>
+            <span className="material-icons">grass</span>
             <p className="">GitHubコミット状況</p>
           </div>
         </div>
@@ -100,7 +105,7 @@ export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
           </div>
         </div>
         <div className="flex items-center mb-4 mx-2 justify-center flex-wrap ">
-          <span class="material-icons">signal_cellular_alt</span>
+          <span className="material-icons">signal_cellular_alt</span>
           <p className="">GitHubでの言語グラフ</p>
         </div>
 

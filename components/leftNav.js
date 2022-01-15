@@ -23,6 +23,20 @@ export default function LeftNav(props) {
           <Link href="/profile">
             <a className="my-2">Profile</a>
           </Link>
+          <div className="flex flex-col text-lg ml-4">
+            <Link href="/profile#info">
+              <a className="">情報</a>
+            </Link>
+            <Link href="/profile#like">
+              <a className="">好み</a>
+            </Link>
+            <Link href="/profile#history">
+              <a className="">経歴</a>
+            </Link>
+            <Link href="/profile#tech">
+              <a className="">技術</a>
+            </Link>
+          </div>
           <Link href="/works">
             <a className="my-2">Works</a>
           </Link>

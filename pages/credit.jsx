@@ -45,6 +45,14 @@ export default function Credit() {
           licenseLink="https://www.drupal.org/about/licensing#drupal-license"
           productLink="https://www.drupal.org/"
         />
+        <CreditFrame
+          title="react-images-loaded"
+          license="MIT"
+          copyright="Copyright (c) 2017 Øyvind Hermansen"
+          description="画像の遅延読み込み周りで使用しています"
+          licenseLink="hhttps://github.com/oyvindhermansen/react-images-loaded/blob/master/LICENSE"
+          productLink="https://github.com/oyvindhermansen/react-images-loaded"
+        />
         <Heading1 title={"画像"} />
         <CreditFrame
           title="grass-graph"
@@ -77,6 +85,15 @@ export default function Credit() {
           description="Profileページでの技術スタックアイコンにて使用しています。"
           licenseLink="https://github.com/devicons/devicon/blob/master/LICENSE"
           productLink="https://devicon.dev/"
+        />
+        <Heading1 title={"CSSアニメーション"} />
+        <CreditFrame
+          title="css-loaders"
+          license="MIT"
+          copyright="Copyright (c) 2014 Luke Haas"
+          description="ギャラリー画像での画像読み込み時に使用しています。"
+          licenseLink="https://github.com/lukehaas/css-loaders/blob/step2/LICENSE"
+          productLink="https://projects.lukehaas.me/css-loaders/"
         />
         <Heading1 title={"カラー"} />
         <CreditFrame

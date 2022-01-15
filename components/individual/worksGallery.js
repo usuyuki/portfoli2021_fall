@@ -19,7 +19,7 @@ export default function WorksGallery(props) {
       delay: 3000,
       disableOnInteraction: false,
     },
-    loop: true,
+    // loop: true,
   };
   return (
     <div className="">
@@ -43,18 +43,38 @@ export default function WorksGallery(props) {
         .gallery-content img {
           cursor: pointer;
         }
+        .swiper-slide image {
+        }
       `}</style>
       {/* {ua=="pc"?():()} */}
       <Swiper tag="nav" {...params}>
         {props.image_urls.map((value, key) => {
           return (
             <SwiperSlide key={key}>
-              <Image
-                width={2000}
-                height={2000}
-                src={value}
-                objectFit="contain"
-              />
+              <div className="img-override">
+                <Image
+                  width={2000}
+                  height={2000}
+                  src={value}
+                  id={"img_" + key}
+                  objectFit="contain"
+                  onLoad={() => {
+                    var loadingElement = document.getElementById(
+                      "loading_" + key
+                    );
+                    // console.log(typeof loadingElement);
+                    try {
+                      loadingElement.remove();
+                    } catch (error) {
+                      // console.log(loadingElement.classList);
+                    }
+                  }}
+                />
+
+                <div className="img-loading" id={"loading_" + key}>
+                  Loading...
+                </div>
+              </div>
             </SwiperSlide>
           );
         })}
