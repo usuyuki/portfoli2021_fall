@@ -40,10 +40,11 @@ export default function Layout(props) {
           rel="stylesheet"
         />
         {/* まてりある */}
-        <link
+        {/* フォントはnextjsとgoogleの最適化で早いが、アイコンは個人保持の方が早い */}
+        {/* <link
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet"
-        />
+        /> */}
         {/* ふぁびこん */}
         <link
           rel="apple-touch-icon"
