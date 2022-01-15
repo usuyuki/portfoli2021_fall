@@ -51,21 +51,30 @@ export default function WorksGallery(props) {
         {props.image_urls.map((value, key) => {
           return (
             <SwiperSlide key={key}>
-              <Image
-                width={2000}
-                height={2000}
-                src={value}
-                id={"img_" + key}
-                objectFit="contain"
-                className="img-loading"
-                onLoad={() => {
-                  var imageElement = document.getElementById("img_" + key);
-                  // console.log(key);
-                  // console.log(imageElement.classList);
-                  imageElement.classList.remove("img-loading");
-                  // console.log(imageElement.classList);
-                }}
-              />
+              <div className="img-override">
+                <Image
+                  width={2000}
+                  height={2000}
+                  src={value}
+                  id={"img_" + key}
+                  objectFit="contain"
+                  onLoad={() => {
+                    var loadingElement = document.getElementById(
+                      "loading_" + key
+                    );
+                    // console.log(typeof loadingElement);
+                    try {
+                      loadingElement.remove();
+                    } catch (error) {
+                      // console.log(loadingElement.classList);
+                    }
+                  }}
+                />
+
+                <div className="img-loading" id={"loading_" + key}>
+                  Loading...
+                </div>
+              </div>
             </SwiperSlide>
           );
         })}

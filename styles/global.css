@@ -348,20 +348,26 @@ a:hover {
   }
 }
 
+.img-override {
+  position: relative;
+}
 /* 画像読み込み */
 /* Copyright (c) 2014 Luke Haas Released under the MIT license
 https://github.com/lukehaas/css-loaders/blob/step2/LICENSE */
 .img-loading,
 .img-loading:before,
 .img-loading:after {
-  background: #ffffff;
+  background: var(--u_c_1);
   -webkit-animation: load1 1s infinite ease-in-out;
   animation: load1 1s infinite ease-in-out;
   width: 1em;
   height: 4em;
 }
 .img-loading {
-  color: #ffffff;
+  position: absolute !important;
+  top: 100px;
+  left: 50%;
+  color: var(--u_c_2);
   text-indent: -9999em;
   margin: 88px auto;
   position: relative;
