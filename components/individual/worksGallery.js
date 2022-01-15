@@ -8,6 +8,13 @@ import "swiper/css/pagination";
 SwiperCore.use([Autoplay, Pagination]);
 
 export default function WorksGallery(props) {
+  const loadedImage = (e) => {
+    console.log(e);
+    // var imageElement = document.getElementById("sample");
+
+    // imageElement.classList.remove("img-loading");
+  };
+  let imageKey = 0;
   const params = {
     //Swiperの設定
     initialSlide: 0,
@@ -43,6 +50,13 @@ export default function WorksGallery(props) {
         .gallery-content img {
           cursor: pointer;
         }
+        .swiper-slide image {
+        }
+        .img-loading {
+          width: 300px;
+          height: 300px;
+          display: hidden !important;
+        }
       `}</style>
       {/* {ua=="pc"?():()} */}
       <Swiper tag="nav" {...params}>
@@ -53,7 +67,16 @@ export default function WorksGallery(props) {
                 width={2000}
                 height={2000}
                 src={value}
+                id={"img_" + key}
                 objectFit="contain"
+                className="img-loading"
+                onLoadingComplete={() => {
+                  var imageElement = document.getElementById("img_" + key);
+                  console.log(imageElement);
+
+                  imageElement.classList.remove("img-loading");
+                  console.log(imageElement);
+                }}
               />
             </SwiperSlide>
           );

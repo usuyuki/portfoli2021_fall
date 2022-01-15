@@ -13,7 +13,7 @@ export default function MyComponent() {
       <div className="w-full lg:w-1/2 ">
         <div className="h-1/4 fadeUp delay-time02 flex items-center py-2 justify-center">
           <div className="w-1/12 ">
-            <span class="material-icons arrow-rotate">arrow_back</span>
+            <span className="material-icons arrow-rotate">arrow_back</span>
           </div>
           <div className="w-11/12">
             <p>VRChat楽しい</p>
@@ -21,7 +21,7 @@ export default function MyComponent() {
         </div>
         <div className="h-2/4 fadeUp delay-time04 flex items-center py-2 justify-center">
           <div className="w-1/12 ">
-            <span class="material-icons arrow-rotate">arrow_back</span>
+            <span className="material-icons arrow-rotate">arrow_back</span>
           </div>
           <div className="w-11/12">
             <p>キャラメルポップコーン美味しい</p>
@@ -29,7 +29,7 @@ export default function MyComponent() {
         </div>
         <div className="h-1/4 fadeUp delay-time06 flex items-center py-2 justify-center">
           <div className="w-1/12 ">
-            <span class="material-icons arrow-rotate">arrow_back</span>
+            <span className="material-icons arrow-rotate">arrow_back</span>
           </div>
           <div className="w-11/12">
             <p>QOLが大事</p>

@@ -106,7 +106,7 @@ export default function SocialIcons() {
         </div> */}
       </div>
       <div className="flex items-center  mb-12 mx-2 justify-center flex-wrap ">
-        <span class="material-icons">chat_bubble</span>
+        <span className="material-icons">chat_bubble</span>
         <p className="">SNSなど</p>
       </div>
     </div>

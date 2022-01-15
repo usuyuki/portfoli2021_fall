@@ -45,6 +45,14 @@ export default function Credit() {
           licenseLink="https://www.drupal.org/about/licensing#drupal-license"
           productLink="https://www.drupal.org/"
         />
+        <CreditFrame
+          title="react-images-loaded"
+          license="MIT"
+          copyright="Copyright (c) 2017 Øyvind Hermansen"
+          description="画像の遅延読み込み周りで使用しています"
+          licenseLink="hhttps://github.com/oyvindhermansen/react-images-loaded/blob/master/LICENSE"
+          productLink="https://github.com/oyvindhermansen/react-images-loaded"
+        />
         <Heading1 title={"画像"} />
         <CreditFrame
           title="grass-graph"
