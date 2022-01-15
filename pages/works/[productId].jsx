@@ -52,9 +52,10 @@ export default function WorksIndividual({ data }) {
       if (counter_for_thumbnail == 0) {
         image_thumbnail = "https://usuyuki.net/" + element.attributes.uri.url;
         counter_for_thumbnail += 1;
+      } else {
+        //ギャラリー画像
+        image_urls.push("https://usuyuki.net/" + element.attributes.uri.url);
       }
-      //ギャラリー画像
-      image_urls.push("https://usuyuki.net/" + element.attributes.uri.url);
     } else if (element.type == "taxonomy_term--works_genre") {
       genre_names[element.id] = element.attributes.name;
       if (element.id == "e9fc047c-4c12-4ce0-a2a2-45d6d900153a") {
@@ -66,7 +67,7 @@ export default function WorksIndividual({ data }) {
       work_scale = element.attributes.name;
     }
   });
-
+  console.log(image_urls);
   return (
     <div>
       <Layout title_prefix={title_prefix} pageTitle={pageTitle}>

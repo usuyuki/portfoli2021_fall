@@ -8,13 +8,6 @@ import "swiper/css/pagination";
 SwiperCore.use([Autoplay, Pagination]);
 
 export default function WorksGallery(props) {
-  const loadedImage = (e) => {
-    console.log(e);
-    // var imageElement = document.getElementById("sample");
-
-    // imageElement.classList.remove("img-loading");
-  };
-  let imageKey = 0;
   const params = {
     //Swiperの設定
     initialSlide: 0,
@@ -65,12 +58,13 @@ export default function WorksGallery(props) {
                 id={"img_" + key}
                 objectFit="contain"
                 className="img-loading"
-                onLoadingComplete={() => {
+                onLoad={() => {
                   var imageElement = document.getElementById("img_" + key);
-                  console.log(imageElement);
 
+                  console.log(key);
+                  console.log(imageElement.classList);
                   imageElement.classList.remove("img-loading");
-                  console.log(imageElement);
+                  console.log(imageElement.classList);
                 }}
               />
             </SwiperSlide>
