@@ -67,7 +67,7 @@ export default function WorksIndividual({ data }) {
       work_scale = element.attributes.name;
     }
   });
-  console.log(image_urls);
+
   return (
     <div>
       <Layout title_prefix={title_prefix} pageTitle={pageTitle}>
