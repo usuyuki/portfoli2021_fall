@@ -5,13 +5,13 @@
  */
 
 /* Material+Iconsを自前に変更 */
-@font-face {
+/* @font-face {
   font-display: swap;
   font-family: "Material Icons";
   font-style: normal;
   font-weight: 400;
   src: local("Material Icons"), url(/fonts/MaterialIconsRound-Regular.otf);
-}
+} */
 /* @font-face {
   font-display: swap;
   font-weight: 400;
