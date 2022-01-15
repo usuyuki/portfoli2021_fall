@@ -162,21 +162,51 @@ export default function Home({ history, tech_stack }) {
   return (
     <div>
       <Layout title_prefix={title_prefix} pageTitle={pageTitle}>
-        <div>
+        <div id="info">
+          <div className="flex items-center justify-center">
+            <h2 className="text-center my-4 py-2 px-4 mt-12 mb-4 text-4xl border-2 inline-block border-u_c_4 rounded-xl">
+              <span class="material-icons">info</span>
+              <span className="ml-2">基本情報</span>
+            </h2>
+          </div>
           <h2 className="text-center my-4 mx-4 text-3xl">うすゆき</h2>
           <AboutMeFrame icon="face">
-            <p className="">Age:19</p>
-            <p className="">Utsunomiya University</p>
-            <p className="">Grade:B2</p>
-            <p className="">Major:Information science</p>
+            <p className="my-4 md:my-0">Age:19</p>
+            <p className="my-4 md:my-0">Utsunomiya University</p>
+            <p className="my-4 md:my-0">Grade:B2</p>
+            <p className="my-4 md:my-0">Major:Information science</p>
           </AboutMeFrame>
           <AboutMeFrame icon="home">
-            <p className="">Birthplace:Tottori Prefecture</p>
-            <p className="">Hometown:Shimane Prefecture</p>
-            <p className="">Residence:Tochigi Prefecture</p>
+            <p className="my-4 md:my-0">Birthplace:Tottori Prefecture</p>
+            <p className="my-4 md:my-0">Hometown:Shimane Prefecture</p>
+            <p className="my-4 md:my-0">Residence:Tochigi Prefecture</p>
           </AboutMeFrame>
         </div>
-        <div className="">
+        <div id="like">
+          <div className="flex items-center justify-center">
+            <h2 className="text-center my-4 py-2 px-4 mt-12 mb-4 text-4xl border-2 inline-block border-u_c_4 rounded-xl">
+              <span class="material-icons">favorite</span>
+              <span className="ml-2">好み</span>
+            </h2>
+          </div>
+          <AboutMeFrame icon="favorite">
+            <p className="my-4 md:my-0">好きなアニメ:たまこまーけっと</p>
+            <p className="my-4 md:my-0">好きな食べ物:コンペイトウ</p>
+            <p className="my-4 md:my-0">好きな飲み物:コーヒー</p>
+            <p className="my-4 md:my-0">好きなVTuber:しぐれうい先生</p>
+            <p className="my-4 md:my-0">
+              好きな駅メロ:JR-SH5(東京駅3番線 京浜東北 北行 ホーム)
+            </p>
+            <p className="my-4 md:my-0">好きなSNS:misskey</p>
+          </AboutMeFrame>
+        </div>
+        <div className="" id="history">
+          <div className="flex items-center justify-center">
+            <h2 className="text-center my-4 py-2 px-4 mt-12 mb-4 text-4xl border-2 inline-block border-u_c_4 rounded-xl">
+              <span className="material-icons">history_edu</span>
+              <span className="ml-2">経歴</span>
+            </h2>
+          </div>
           <article>
             <Heading1 title={"学業"} />
             <TimelineLayout content={value_sortedBy_genreHI["学業"]} />
@@ -194,7 +224,13 @@ export default function Home({ history, tech_stack }) {
             <TimelineLayout content={value_sortedBy_genreHI["団体"]} />
           </article>
         </div>
-        <div className="">
+        <div className="" id="tech">
+          <div className="flex items-center justify-center">
+            <h2 className="text-center my-4 py-2 px-4 mt-12 mb-4 text-4xl border-2 inline-block border-u_c_4 rounded-xl">
+              <span class="material-icons">extension</span>
+              <span className="ml-2">技術スタック</span>
+            </h2>
+          </div>
           <article>
             <Heading1 title={"プログラミング言語"} />
             <TechStackLayout
