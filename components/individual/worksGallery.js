@@ -52,11 +52,6 @@ export default function WorksGallery(props) {
         }
         .swiper-slide image {
         }
-        .img-loading {
-          width: 300px;
-          height: 300px;
-          display: hidden !important;
-        }
       `}</style>
       {/* {ua=="pc"?():()} */}
       <Swiper tag="nav" {...params}>
