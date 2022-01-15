@@ -86,6 +86,15 @@ export default function Credit() {
           licenseLink="https://github.com/devicons/devicon/blob/master/LICENSE"
           productLink="https://devicon.dev/"
         />
+        <Heading1 title={"CSSアニメーション"} />
+        <CreditFrame
+          title="css-loaders"
+          license="MIT"
+          copyright="Copyright (c) 2014 Luke Haas"
+          description="ギャラリー画像での画像読み込み時に使用しています。"
+          licenseLink="https://github.com/lukehaas/css-loaders/blob/step2/LICENSE"
+          productLink="https://projects.lukehaas.me/css-loaders/"
+        />
         <Heading1 title={"カラー"} />
         <CreditFrame
           title="和風カラーパレット 10 卯の花"

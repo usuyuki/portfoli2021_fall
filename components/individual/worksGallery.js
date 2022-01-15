@@ -19,7 +19,7 @@ export default function WorksGallery(props) {
       delay: 3000,
       disableOnInteraction: false,
     },
-    loop: true,
+    // loop: true,
   };
   return (
     <div className="">
@@ -60,11 +60,10 @@ export default function WorksGallery(props) {
                 className="img-loading"
                 onLoad={() => {
                   var imageElement = document.getElementById("img_" + key);
-
-                  console.log(key);
-                  console.log(imageElement.classList);
+                  // console.log(key);
+                  // console.log(imageElement.classList);
                   imageElement.classList.remove("img-loading");
-                  console.log(imageElement.classList);
+                  // console.log(imageElement.classList);
                 }}
               />
             </SwiperSlide>
