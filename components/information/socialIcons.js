@@ -48,6 +48,20 @@ export default function SocialIcons() {
             />
           </a>
         </div>
+        {/* ブログ */}
+        <div className="w-16 h-auto p-4">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://blog.usuyuki.net/"
+          >
+            <Image
+              width={64}
+              height={64}
+              src="/img/icons/usuyukiBlog-icon.png"
+            />
+          </a>
+        </div>
         {/* Qiita */}
         <div className="w-16 h-auto p-4">
           <a
@@ -78,8 +92,10 @@ export default function SocialIcons() {
             <Image width={64} height={64} src="/img/icons/dokumeFuu.png" />
           </a>
         </div>
+
         {/* Kaggle */}
-        <div className="w-16 h-auto p-4">
+
+        {/* <div className="w-16 h-auto p-4">
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -87,7 +103,7 @@ export default function SocialIcons() {
           >
             <Image width={64} height={64} src="/img/icons/kaggle-icon.svg" />
           </a>
-        </div>
+        </div> */}
       </div>
       <div className="flex items-center  mb-12 mx-2 justify-center flex-wrap ">
         <span class="material-icons">chat_bubble</span>
