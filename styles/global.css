@@ -5,7 +5,7 @@
  */
 
 /* Material+Iconsを自前に変更 */
-@font-face {
+/* @font-face {
   font-display: swap;
   font-family: "Material Icons";
   font-style: normal;
@@ -25,7 +25,7 @@
   font-style: normal;
   font-family: "Rampart One";
   src: url("/fonts/RampartOne-Regular") format("ttf");
-}
+} */
 
 html {
   scroll-behavior: smooth;

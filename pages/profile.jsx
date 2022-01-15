@@ -165,7 +165,7 @@ export default function Home({ history, tech_stack }) {
         <div id="info">
           <div className="flex items-center justify-center">
             <h2 className="text-center my-4 py-2 px-4 mt-12 mb-4 text-4xl border-2 inline-block border-u_c_4 rounded-xl">
-              <span class="material-icons">info</span>
+              <span className="material-icons">info</span>
               <span className="ml-2">基本情報</span>
             </h2>
           </div>
@@ -185,7 +185,7 @@ export default function Home({ history, tech_stack }) {
         <div id="like">
           <div className="flex items-center justify-center">
             <h2 className="text-center my-4 py-2 px-4 mt-12 mb-4 text-4xl border-2 inline-block border-u_c_4 rounded-xl">
-              <span class="material-icons">favorite</span>
+              <span className="material-icons">favorite</span>
               <span className="ml-2">好み</span>
             </h2>
           </div>
@@ -227,7 +227,7 @@ export default function Home({ history, tech_stack }) {
         <div className="" id="tech">
           <div className="flex items-center justify-center">
             <h2 className="text-center my-4 py-2 px-4 mt-12 mb-4 text-4xl border-2 inline-block border-u_c_4 rounded-xl">
-              <span class="material-icons">extension</span>
+              <span className="material-icons">extension</span>
               <span className="ml-2">技術スタック</span>
             </h2>
           </div>

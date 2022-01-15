@@ -16,8 +16,6 @@ export default function Layout(props) {
 
         <meta name="description" content="{うすゆきのポートフォリオです。}" />
         <title>{props.title_prefix} | うすゆきポートフォリオ</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         {/* ogp */}
         <meta property="og:title" content="うすゆきポートフォリオ" />
         <meta
@@ -35,15 +33,17 @@ export default function Layout(props) {
         <meta name="twitter:site" content="@usuyuki26" />
         <meta name="twitter:creator" content="@usuyuki26" />
         {/* google font */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
           href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Rampart+One&display=swap"
           rel="stylesheet"
         />
         {/* まてりある */}
-        {/* <link
+        <link
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet"
-        /> */}
+        />
         {/* ふぁびこん */}
         <link
           rel="apple-touch-icon"

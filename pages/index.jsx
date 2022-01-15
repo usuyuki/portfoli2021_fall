@@ -84,7 +84,7 @@ export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
             />
           </a>
           <div className="flex items-center mb-4 mx-2 justify-center flex-wrap ">
-            <span class="material-icons">grass</span>
+            <span className="material-icons">grass</span>
             <p className="">GitHubコミット状況</p>
           </div>
         </div>
@@ -105,7 +105,7 @@ export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
           </div>
         </div>
         <div className="flex items-center mb-4 mx-2 justify-center flex-wrap ">
-          <span class="material-icons">signal_cellular_alt</span>
+          <span className="material-icons">signal_cellular_alt</span>
           <p className="">GitHubでの言語グラフ</p>
         </div>
 
