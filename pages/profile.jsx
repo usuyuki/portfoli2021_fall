@@ -163,8 +163,8 @@ export default function Home({ history, tech_stack }) {
     <div>
       <Layout title_prefix={title_prefix} pageTitle={pageTitle}>
         <div id="info">
-          <div className="flex items-center justify-center">
-            <h2 className="text-center my-4 py-2 px-4 mt-12 mb-4 text-4xl border-2 inline-block border-u_c_4 rounded-xl">
+          <div className="flex justify-center">
+            <h2 className="text-center py-2 px-4 mt-12 md:mt-24  text-4xl border-2 inline-block border-u_c_4 rounded-xl">
               <span className="material-icons">info</span>
               <span className="ml-2">基本情報</span>
             </h2>
@@ -183,8 +183,8 @@ export default function Home({ history, tech_stack }) {
           </AboutMeFrame>
         </div>
         <div id="like">
-          <div className="flex items-center justify-center">
-            <h2 className="text-center my-4 py-2 px-4 mt-12 mb-4 text-4xl border-2 inline-block border-u_c_4 rounded-xl">
+          <div className="flex justify-center">
+            <h2 className="text-center py-2 px-4 mt-12 md:mt-24  text-4xl border-2 inline-block border-u_c_4 rounded-xl">
               <span className="material-icons">favorite</span>
               <span className="ml-2">好み</span>
             </h2>
@@ -201,8 +201,8 @@ export default function Home({ history, tech_stack }) {
           </AboutMeFrame>
         </div>
         <div className="" id="history">
-          <div className="flex items-center justify-center">
-            <h2 className="text-center my-4 py-2 px-4 mt-12 mb-4 text-4xl border-2 inline-block border-u_c_4 rounded-xl">
+          <div className="flex justify-center">
+            <h2 className="text-center py-2 px-4 mt-12 md:mt-24  text-4xl border-2 inline-block border-u_c_4 rounded-xl">
               <span className="material-icons">history_edu</span>
               <span className="ml-2">経歴</span>
             </h2>
@@ -225,8 +225,8 @@ export default function Home({ history, tech_stack }) {
           </article>
         </div>
         <div className="" id="tech">
-          <div className="flex items-center justify-center">
-            <h2 className="text-center my-4 py-2 px-4 mt-12 mb-4 text-4xl border-2 inline-block border-u_c_4 rounded-xl">
+          <div className="flex justify-center">
+            <h2 className="text-center py-2 px-4 mt-12 md:mt-24  text-4xl border-2 inline-block border-u_c_4 rounded-xl">
               <span className="material-icons">extension</span>
               <span className="ml-2">技術スタック</span>
             </h2>
