@@ -59,13 +59,17 @@ export default function WorksGallery(props) {
                   id={"img_" + key}
                   objectFit="contain"
                   onLoad={() => {
-                    var loadingElement = document.getElementById(
+                    let loadingElement = document.getElementById(
                       "loading_" + key
                     );
                     // console.log(typeof loadingElement);
                     try {
                       loadingElement.remove();
+                      // setTimeout(function () {
+                      //   loadingElement.remove();
+                      // }, 200);
                     } catch (error) {
+                      console.log("ただしく消せていない");
                       // console.log(loadingElement.classList);
                     }
                   }}
