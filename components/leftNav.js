@@ -36,6 +36,9 @@ export default function LeftNav(props) {
             <Link href="/profile#tech">
               <a className="">技術</a>
             </Link>
+            <Link href="/profile#hobby">
+              <a className="">趣味</a>
+            </Link>
           </div>
           <Link href="/works">
             <a className="my-2">Works</a>

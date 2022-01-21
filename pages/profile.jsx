@@ -5,6 +5,7 @@ import Heading1 from "../components/decoration/heading1";
 import AboutMeFrame from "../components/frames/aboutMeFrame";
 import TimelineLayout from "../components/frames/timelineLayout";
 import TechStackLayout from "../components/frames/techStackLayout";
+import HobbyLayout from "../components/frames/hobbyLayout";
 
 export const getStaticProps = async () => {
   const history = await fetch(
@@ -13,17 +14,22 @@ export const getStaticProps = async () => {
   const tech_stack = await fetch(
     "https://usuyuki.net/jsonapi/node/tech_stack?include=field_tech_stack_genre"
   ).then((r) => r.json());
-  return { props: { history, tech_stack }, revalidate: 120 };
+  const hobby = await fetch(
+    "https://usuyuki.net/jsonapi/node/hobby?include=field_hobby_rate"
+  ).then((r) => r.json());
+  return { props: { history, tech_stack, hobby }, revalidate: 120 };
 };
 
-export default function Home({ history, tech_stack }) {
+export default function Home({ history, tech_stack, hobby }) {
   let title_prefix = "プロフィール";
   let pageTitle = "Profile";
 
   let history_genre_names = {}; //[ジャンルid]=ジャンル名
   let tech_stack_genre_names = {}; //[ジャンルid]=ジャンル名
+  let hobby_stack_hobby_rate = {}; //[ジャンルid]=ジャンル名
   let value_sortedBy_genreHI = {}; //[ジャンルid]=ジャンル名
   let value_sortedBy_genreTS = {}; //[ジャンルid]=ジャンル名
+  let value_sortedBy_genreHY = {}; //[ジャンルid]=ジャンル名
   //連想配列の初期化をしておく
   value_sortedBy_genreHI["その他"] = [];
   value_sortedBy_genreHI["仕事"] = [];
@@ -37,6 +43,12 @@ export default function Home({ history, tech_stack }) {
   value_sortedBy_genreTS["プログラミング言語"] = [];
   value_sortedBy_genreTS["環境"] = [];
 
+  value_sortedBy_genreHY["active"] = [];
+  value_sortedBy_genreHY["passive"] = [];
+  // value_sortedBy_genreHY["★★★"] = [];
+  // value_sortedBy_genreHY["★★★★"] = [];
+  // value_sortedBy_genreHY["★★★★★"] = [];
+
   /**
    * ジャンル取得
    */
@@ -45,6 +57,9 @@ export default function Home({ history, tech_stack }) {
   });
   tech_stack.included.forEach((element) => {
     tech_stack_genre_names[element.id] = element.attributes.name;
+  });
+  hobby.included.forEach((element) => {
+    hobby_stack_hobby_rate[element.id] = element.attributes.name;
   });
 
   /**
@@ -158,6 +173,30 @@ export default function Home({ history, tech_stack }) {
     }
   });
 
+  /**
+   * レートごとに分ける
+   */
+  hobby.data.forEach((value) => {
+    switch (value.attributes.field_hobby_active) {
+      case "active":
+        value_sortedBy_genreHY["active"].push([
+          value.attributes.title,
+          hobby_stack_hobby_rate[value.relationships.field_hobby_rate.data.id],
+          value.attributes.body.value,
+        ]);
+        break;
+      case "passive":
+        value_sortedBy_genreHY["passive"].push([
+          value.attributes.title,
+          hobby_stack_hobby_rate[value.relationships.field_hobby_rate.data.id],
+          value.attributes.body.value,
+        ]);
+        break;
+      default:
+        console.log("抜け漏れあり");
+    }
+  });
+
   //出力
   return (
     <div>
@@ -197,7 +236,7 @@ export default function Home({ history, tech_stack }) {
             <p className="my-4 md:my-0">
               好きな駅メロ:JR-SH5(東京駅3番線 京浜東北 北行 ホーム)
             </p>
-            <p className="my-4 md:my-0">好きなSNS:misskey</p>
+            <p className="my-4 md:my-0">好きなSNS:Misskey</p>
           </AboutMeFrame>
         </div>
         <div className="" id="history">
@@ -254,6 +293,21 @@ export default function Home({ history, tech_stack }) {
           <article>
             <Heading1 title={"環境"} />
             <TechStackLayout content={value_sortedBy_genreTS["環境"]} />
+          </article>
+        </div>
+        <div className="" id="hobby">
+          <div className="flex justify-center">
+            <h2 className="text-center py-2 px-4 mt-12 md:mt-24  text-4xl border-2 inline-block border-u_c_4 rounded-xl">
+              <span className="material-icons">golf_course</span>
+              <span className="ml-2">趣味</span>
+            </h2>
+          </div>
+          <article>
+            <HobbyLayout content={value_sortedBy_genreHY["active"]} />
+          </article>
+          <article>
+            <Heading1 title={"かつての趣味"} />
+            <HobbyLayout content={value_sortedBy_genreHY["passive"]} />
           </article>
         </div>
       </Layout>
