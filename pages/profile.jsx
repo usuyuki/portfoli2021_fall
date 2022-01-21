@@ -36,6 +36,7 @@ export default function Home({ history, tech_stack, hobby }) {
   value_sortedBy_genreHI["団体"] = [];
   value_sortedBy_genreHI["学業"] = [];
   value_sortedBy_genreHI["資格"] = [];
+  value_sortedBy_genreHI["コンテスト"] = [];
 
   value_sortedBy_genreTS["CMS"] = [];
   value_sortedBy_genreTS["ソフトウェア"] = [];
@@ -113,6 +114,16 @@ export default function Home({ history, tech_stack, hobby }) {
         break;
       case "学業":
         value_sortedBy_genreHI["学業"].push([
+          value.attributes.field_history_date,
+          value.attributes.title,
+          value.attributes.body != null ? value.attributes.body.value : "",
+          history_genre_names[
+            value.relationships.field_history_genre.data[0].id
+          ],
+        ]);
+        break;
+      case "コンテスト":
+        value_sortedBy_genreHI["コンテスト"].push([
           value.attributes.field_history_date,
           value.attributes.title,
           value.attributes.body != null ? value.attributes.body.value : "",
@@ -261,6 +272,10 @@ export default function Home({ history, tech_stack, hobby }) {
           <article>
             <Heading1 title={"団体"} />
             <TimelineLayout content={value_sortedBy_genreHI["団体"]} />
+          </article>
+          <article>
+            <Heading1 title={"コンテスト"} />
+            <TimelineLayout content={value_sortedBy_genreHI["コンテスト"]} />
           </article>
         </div>
         <div className="" id="tech">
