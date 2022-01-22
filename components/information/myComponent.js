@@ -16,7 +16,7 @@ export default function MyComponent() {
             <span className="material-icons arrow-rotate">arrow_back</span>
           </div>
           <div className="w-11/12">
-            <p>VRChat楽しい</p>
+            <p>日記のwebアプリ作っています。</p>
           </div>
         </div>
         <div className="h-2/4 fadeUp delay-time04 flex items-center py-2 justify-center">
@@ -24,7 +24,7 @@ export default function MyComponent() {
             <span className="material-icons arrow-rotate">arrow_back</span>
           </div>
           <div className="w-11/12">
-            <p>キャラメルポップコーン美味しい</p>
+            <p>VRChatを楽しんでいます。</p>
           </div>
         </div>
         <div className="h-1/4 fadeUp delay-time06 flex items-center py-2 justify-center">
@@ -32,7 +32,7 @@ export default function MyComponent() {
             <span className="material-icons arrow-rotate">arrow_back</span>
           </div>
           <div className="w-11/12">
-            <p>QOLが大事</p>
+            <p>QOLが大事。</p>
           </div>
         </div>
       </div>
