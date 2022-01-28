@@ -2,7 +2,7 @@
 .leftNav_line {
   background-color: var(--u_c_5);
   width: 4px;
-  height: 410px;
+  height: 440px;
   margin-right: 10px;
 }
 
@@ -14,7 +14,6 @@
   margin: 0 12px;
   z-index: 2;
 }
-
 
 /* ボタン周り */
 .nav_button {
