@@ -86,6 +86,14 @@ export default function Credit() {
           licenseLink="https://github.com/devicons/devicon/blob/master/LICENSE"
           productLink="https://devicon.dev/"
         />
+        <CreditFrame
+          title="ICOON MONO"
+          license="不明"
+          copyright="© Copyright TopeconHeroes ! all right reserved."
+          description="Profileページでの技術スタックアイコン(DEVICONに無いものなど)にて使用しています。"
+          licenseLink="https://icooon-mono.com/license/"
+          productLink="https://icooon-mono.com/"
+        />
         <Heading1 title={"CSSアニメーション"} />
         <CreditFrame
           title="css-loaders"
