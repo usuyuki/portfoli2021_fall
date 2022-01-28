@@ -128,12 +128,16 @@ export default function WorksIndividual({ data }) {
             <div className="w-full  ">
               <Heading1 title={"動画"} />
               <div className="flex justify-center">
-                <iframe
-                  src={data.data.attributes.field_works_yt.uri}
-                  loading="lazy"
-                  width="560"
-                  height="315"
-                ></iframe>
+                {data.data.attributes.field_works_yt != null ? (
+                  <iframe
+                    src={data.data.attributes.field_works_yt.uri}
+                    loading="lazy"
+                    width="560"
+                    height="315"
+                  ></iframe>
+                ) : (
+                  <p className="text-center text-2xl">動画はありません</p>
+                )}
               </div>
             </div>
             <div className="w-full  ">
