@@ -53,6 +53,9 @@ export default function LeftNav(props) {
             <Link href="/works/genre/e96bb5b5-a9a5-457a-a45b-cfcfd0840ab0">
               <a className="">マイコン</a>
             </Link>
+            <Link href="/works/genre/e9fc047c-4c12-4ce0-a2a2-45d6d900153a">
+              <a className="">映像制作</a>
+            </Link>
           </div>
           <Link href="/links">
             <a className="my-2">Links</a>
