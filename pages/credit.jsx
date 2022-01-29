@@ -41,9 +41,17 @@ export default function Credit() {
           title="Drupal"
           license="GNU General Public License v2.0"
           copyright=""
-          description="Worksを管理するためのAPIとして利用しているCMSです。"
+          description="Works、経歴、趣味などを管理するためのAPIとして利用しているCMSです。"
           licenseLink="https://www.drupal.org/about/licensing#drupal-license"
           productLink="https://www.drupal.org/"
+        />
+        <CreditFrame
+          title="WordPress"
+          license="GNU General Public License v2.0"
+          copyright=""
+          description="トップページの記事表示にAPIとして利用しているCMSです。"
+          licenseLink="https://ja.wordpress.org/gpl/"
+          productLink="https://ja.wordpress.org"
         />
         <CreditFrame
           title="react-images-loaded"
@@ -74,7 +82,7 @@ export default function Credit() {
           title="ICOOON MONO"
           license="不明"
           copyright="© Copyright TopeconHeroes !"
-          description="トップページでの人形ピクトグラムに使用しています。"
+          description="トップページでの人形ピクトグラム、技術スタック部分にて使用しています。"
           licenseLink="https://icooon-mono.com/license/"
           productLink="https://icooon-mono.com/"
         />
@@ -86,14 +94,7 @@ export default function Credit() {
           licenseLink="https://github.com/devicons/devicon/blob/master/LICENSE"
           productLink="https://devicon.dev/"
         />
-        <CreditFrame
-          title="ICOON MONO"
-          license="不明"
-          copyright="© Copyright TopeconHeroes ! all right reserved."
-          description="Profileページでの技術スタックアイコン(DEVICONに無いものなど)にて使用しています。"
-          licenseLink="https://icooon-mono.com/license/"
-          productLink="https://icooon-mono.com/"
-        />
+
         <Heading1 title={"CSSアニメーション"} />
         <CreditFrame
           title="css-loaders"
@@ -108,7 +109,7 @@ export default function Credit() {
           title="和風カラーパレット 10 卯の花"
           license="なし"
           copyright="@neohimeism"
-          description="このサイトのカラーパレットとして採用させていただいております。"
+          description="このサイトのカラーパレットとして採用しました。"
           licenseLink="https://twitter.com/neohimeism"
           productLink="https://twitter.com/neohimeism/status/1356211042108497920"
         />
@@ -133,7 +134,7 @@ export default function Credit() {
           title="Material Icons"
           license="Apache License 2.0"
           copyright=""
-          description="見出しなどのアイコンで利用しています"
+          description="見出しなどのアイコンで利用しています。"
           licenseLink="https://github.com/google/material-design-icons/blob/master/LICENSE"
           productLink="https://fonts.google.com/icons?selected=Material+Icons"
         />
