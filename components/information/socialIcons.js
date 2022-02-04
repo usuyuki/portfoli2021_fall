@@ -6,6 +6,16 @@ export default function SocialIcons() {
   return (
     <div>
       <div className="flex mt-20  mx-2 lg:mx-20 items-center justify-center flex-wrap">
+        {/* Misskey */}
+        <div className="w-16 h-auto p-4">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://misskey.usuyuki.net/@usuyuki"
+          >
+            <Image width={384} height={384} src="/img/icons/misskey.png" />
+          </a>
+        </div>
         {/* Twitter */}
         <div className="w-16 h-auto p-4">
           <a
