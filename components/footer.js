@@ -25,7 +25,7 @@ export default function Footer(props) {
         </p>
       </div>
       <p className="text-center pt-2 pb-6 text-sm text-u_c_5">
-        copyright 2021 usuyuki
+        copyright 2021~2022 usuyuki
       </p>
     </footer>
   );
