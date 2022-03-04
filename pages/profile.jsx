@@ -221,7 +221,7 @@ export default function Home({ history, tech_stack, hobby }) {
           </div>
           <h2 className="text-center my-4 mx-4 text-3xl">うすゆき</h2>
           <AboutMeFrame icon="face">
-            <p className="my-4 md:my-0">Age:19</p>
+            <p className="my-4 md:my-0">Age:20</p>
             <p className="my-4 md:my-0">Utsunomiya University</p>
             <p className="my-4 md:my-0">Grade:B2</p>
             <p className="my-4 md:my-0">Major:Information science</p>
@@ -241,7 +241,9 @@ export default function Home({ history, tech_stack, hobby }) {
           </div>
           <AboutMeFrame icon="favorite">
             <p className="my-4 md:my-0">好きなアニメ:たまこまーけっと</p>
-            <p className="my-4 md:my-0">好きな食べ物:コンペイトウ</p>
+            <p className="my-4 md:my-0">
+              好きな食べ物:コンペイトウ、ポップコーン
+            </p>
             <p className="my-4 md:my-0">好きな飲み物:コーヒー</p>
             <p className="my-4 md:my-0">好きなVTuber:しぐれうい先生</p>
             <p className="my-4 md:my-0">
