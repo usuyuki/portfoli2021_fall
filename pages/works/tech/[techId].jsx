@@ -5,15 +5,15 @@ import Link from "next/link";
 // レンダリング前に実行される
 export const getStaticProps = async ({ params }) => {
   const data = await fetch(
-    "https://usuyuki.net/jsonapi/node/works?sort=-field_works_deploy_start&include=field_works_thumbnail,field_works_genre&filter[field_works_tech.id]=" +
+    "https://pfapi.usuyuki.net/jsonapi/node/works?sort=-field_works_deploy_start&include=field_works_thumbnail,field_works_genre&filter[field_works_tech.id]=" +
       params.techId
   ).then((r) => r.json());
   return { props: { data }, revalidate: 120 };
 };
 
 export async function getStaticPaths() {
-  const data = await fetch("https://usuyuki.net/jsonapi/node/works").then((r) =>
-    r.json()
+  const data = await fetch("https://pfapi.usuyuki.net/jsonapi/node/works").then(
+    (r) => r.json()
   );
   let idList = data.data.map((value) => {
     return value.relationships.field_works_tech.data.map((tech) => {
@@ -38,7 +38,9 @@ export default function Works({ data }) {
 
   data.included.forEach((element) => {
     if (element.type == "file--file") {
-      image_urls.push("https://usuyuki.net/" + element.attributes.uri.url);
+      image_urls.push(
+        "https://pfapi.usuyuki.net/" + element.attributes.uri.url
+      );
     } else if (element.type == "taxonomy_term--works_genre") {
       genre_names[element.id] = element.attributes.name;
     }

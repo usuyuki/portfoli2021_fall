@@ -32,7 +32,7 @@ export default function MyComponent() {
             <span className="material-icons arrow-rotate">arrow_back</span>
           </div>
           <div className="w-11/12">
-            <p>自分用のMisskeyインスタンス、作りました。</p>
+            <p>Pixivのインターンに行ってきました！</p>
           </div>
         </div>
       </div>

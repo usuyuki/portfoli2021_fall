@@ -10,9 +10,9 @@ import WorksTechs from "../../components/individual/worksTechs";
 import WorksGallery from "../../components/individual/worksGallery";
 export const getStaticProps = async ({ params }) => {
   //例
-  //https://usuyuki.net/jsonapi/node/article/382f0ffe-f2db-416e-bfee-e4b0e3334b35?include=field_works_gallery,field_works_genre,field_works_thumbnail,field_works_scale,field_works_tech
+  //https://pfapi.usuyuki.net/jsonapi/node/article/382f0ffe-f2db-416e-bfee-e4b0e3334b35?include=field_works_gallery,field_works_genre,field_works_thumbnail,field_works_scale,field_works_tech
   const data = await fetch(
-    "https://usuyuki.net/jsonapi/node/article/" +
+    "https://pfapi.usuyuki.net/jsonapi/node/article/" +
       params.productId +
       "?include=field_works_thumbnail,field_works_gallery,field_works_genre,field_works_thumbnail,field_works_scale,field_works_tech"
   ).then((r) => r.json());
@@ -20,8 +20,8 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export async function getStaticPaths() {
-  const data = await fetch("https://usuyuki.net/jsonapi/node/works").then((r) =>
-    r.json()
+  const data = await fetch("https://pfapi.usuyuki.net/jsonapi/node/works").then(
+    (r) => r.json()
   );
   const paths = data.data.map((value) => ({
     params: { productId: value.id },
@@ -50,11 +50,14 @@ export default function WorksIndividual({ data }) {
     if (element.type == "file--file") {
       //1枚目にサムネが来るので
       if (counter_for_thumbnail == 0) {
-        image_thumbnail = "https://usuyuki.net/" + element.attributes.uri.url;
+        image_thumbnail =
+          "https://pfapi.usuyuki.net/" + element.attributes.uri.url;
         counter_for_thumbnail += 1;
       } else {
         //ギャラリー画像
-        image_urls.push("https://usuyuki.net/" + element.attributes.uri.url);
+        image_urls.push(
+          "https://pfapi.usuyuki.net/" + element.attributes.uri.url
+        );
       }
     } else if (element.type == "taxonomy_term--works_genre") {
       genre_names[element.id] = element.attributes.name;

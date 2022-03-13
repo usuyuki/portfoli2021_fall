@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 // レンダリング前に実行される
 export const getStaticProps = async () => {
   const data = await fetch(
-    "https://usuyuki.net/jsonapi/node/link?sort=-created"
+    "https://pfapi.usuyuki.net/jsonapi/node/link?sort=-created"
   ).then((r) => r.json());
   return { props: { data }, revalidate: 120 };
 };
@@ -13,7 +13,7 @@ export const getStaticProps = async () => {
 export default function Links({ data }) {
   let title_prefix = "Links";
   let pageTitle = "Links";
-  // const { data, error } = useSWR("https://usuyuki.net/jsonapi/node/link");
+  // const { data, error } = useSWR("https://pfapi.usuyuki.net/jsonapi/node/link");
   // const [data, setData] = useState({ message: "", data: [] })
 
   return (
