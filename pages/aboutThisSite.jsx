@@ -8,7 +8,7 @@ import Hr from "../components/decoration/hr";
 export default function Credit() {
   let title_prefix = "このサイトについて";
   let pageTitle = "aboutThisSite";
-  // const { data, error } = useSWR("https://usuyuki.net/jsonapi/node/link");
+  // const { data, error } = useSWR("https://pfapi.usuyuki.net/jsonapi/node/link");
   // const [data, setData] = useState({ message: "", data: [] })
 
   return (

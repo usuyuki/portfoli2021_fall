@@ -14,10 +14,10 @@ import { getBlogsSortedPostsData } from "../lib/WPBlogs";
 export const getStaticProps = async () => {
   const [response1, response2, response3] = await Promise.all([
     fetch(
-      "https://usuyuki.net/jsonapi/node/works?sort=-field_works_deploy_start&include=field_works_thumbnail,field_works_genre&page[limit]=5"
+      "https://pfapi.usuyuki.net/jsonapi/node/works?sort=-field_works_deploy_start&include=field_works_thumbnail,field_works_genre&page[limit]=5"
     ).then((r) => r.json()),
     fetch(
-      "https://usuyuki.net/jsonapi/node/works?sort=-changed&include=field_works_thumbnail,field_works_genre&filter[field_works_featured_on_pf]=1"
+      "https://pfapi.usuyuki.net/jsonapi/node/works?sort=-changed&include=field_works_thumbnail,field_works_genre&filter[field_works_featured_on_pf]=1"
     ).then((r) => r.json()),
     getBlogsSortedPostsData(),
   ]);
@@ -42,7 +42,9 @@ export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
   //画像とジャンル取得
   latestWorks.included.forEach((element) => {
     if (element.type == "file--file") {
-      image_urls.push("https://usuyuki.net/" + element.attributes.uri.url);
+      image_urls.push(
+        "https://pfapi.usuyuki.net/" + element.attributes.uri.url
+      );
     } else if (element.type == "taxonomy_term--works_genre") {
       genre_names[element.id] = element.attributes.name;
     }
@@ -52,7 +54,7 @@ export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
   featuredWorks.included.forEach((element) => {
     if (element.type == "file--file") {
       image_urls_featured.push(
-        "https://usuyuki.net/" + element.attributes.uri.url
+        "https://pfapi.usuyuki.net/" + element.attributes.uri.url
       );
     } else if (element.type == "taxonomy_term--works_genre") {
       genre_names[element.id] = element.attributes.name;

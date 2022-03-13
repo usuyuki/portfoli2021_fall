@@ -8,7 +8,7 @@ import CreditFrame from "../components/frames/creditFrame";
 export default function Credit() {
   let title_prefix = "Credit";
   let pageTitle = "Credit";
-  // const { data, error } = useSWR("https://usuyuki.net/jsonapi/node/link");
+  // const { data, error } = useSWR("https://pfapi.usuyuki.net/jsonapi/node/link");
   // const [data, setData] = useState({ message: "", data: [] })
 
   return (

@@ -54,7 +54,8 @@ export default function FeatureWorksCards(props) {
               <div
                 className="p-4 w-full"
                 dangerouslySetInnerHTML={{
-                  __html: value.attributes.body.value,
+                  __html:
+                    value.attributes.body.value.substr(0, 150) + "……(続く)",
                 }}
               />
             </div>

@@ -9,13 +9,13 @@ import HobbyLayout from "../components/frames/hobbyLayout";
 
 export const getStaticProps = async () => {
   const history = await fetch(
-    "https://usuyuki.net/jsonapi/node/history?sort=field_history_date&include=field_history_genre"
+    "https://pfapi.usuyuki.net/jsonapi/node/history?sort=field_history_date&include=field_history_genre"
   ).then((r) => r.json());
   const tech_stack = await fetch(
-    "https://usuyuki.net/jsonapi/node/tech_stack?include=field_tech_stack_genre"
+    "https://pfapi.usuyuki.net/jsonapi/node/tech_stack?include=field_tech_stack_genre"
   ).then((r) => r.json());
   const hobby = await fetch(
-    "https://usuyuki.net/jsonapi/node/hobby?include=field_hobby_rate"
+    "https://pfapi.usuyuki.net/jsonapi/node/hobby?include=field_hobby_rate"
   ).then((r) => r.json());
   return { props: { history, tech_stack, hobby }, revalidate: 120 };
 };
@@ -223,7 +223,7 @@ export default function Home({ history, tech_stack, hobby }) {
           <AboutMeFrame icon="face">
             <p className="my-4 md:my-0">Age:20</p>
             <p className="my-4 md:my-0">Utsunomiya University</p>
-            <p className="my-4 md:my-0">Grade:B2</p>
+            <p className="my-4 md:my-0">Grade:B3</p>
             <p className="my-4 md:my-0">Major:Information science</p>
           </AboutMeFrame>
           <AboutMeFrame icon="home">
