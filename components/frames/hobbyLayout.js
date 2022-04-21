@@ -2,11 +2,11 @@
 
 export default function HobbyLayout(props) {
   return (
-    <div className="flex  flex-wrap justify-center p-2  mx-4 lg:mx-80">
+    <div className="flex  flex-wrap justify-center p-2  mx-4 ">
       {props.content.map((value, key) => {
         return (
           <div
-            className="border-u_c_5 border-4 p-4 rounded-xl m-4 shadow-md md:w-1/3"
+            className="border-u_c_5 border-4 p-4 rounded-xl m-4 shadow-md xl:w-1/3"
             key={key}
           >
             <h3 className="font-semibold text-3xl text-center mb-1">

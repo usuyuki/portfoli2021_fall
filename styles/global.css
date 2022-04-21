@@ -151,6 +151,8 @@ body {
 
 main {
   width: calc(90vw - 200px);
+  max-width: 2000px;
+  margin: 0 auto;
   /* navが192px */
   min-height: calc(100vh - 140px);
 }
@@ -238,8 +240,13 @@ a:hover {
   height: auto;
   object-fit: contain;
 }
-@media screen and (max-width: 767px) {
-  /* スマホ,タブレット */
+@media (max-width: 1020px) and (min-width: 768px) {
+  /* タブレット */
+  .arrow-rotate {
+    transform: rotate(90deg);
+  }
+}
+@media (max-width: 767px) {
   main {
     max-width: 100vw;
     min-width: 100vw;
@@ -250,11 +257,12 @@ a:hover {
   .feature-image {
     text-align: center;
   }
+  /* タブレット */
   .arrow-rotate {
     transform: rotate(90deg);
   }
+  /* スマホ */
 }
-
 /* フェード系アニメーション */
 .fadeUp {
   animation-name: fadeUpAnime;
