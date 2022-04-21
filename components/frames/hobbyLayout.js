@@ -2,7 +2,7 @@
 
 export default function HobbyLayout(props) {
   return (
-    <div className="flex  flex-wrap justify-center p-2  mx-4 lg:mx-80">
+    <div className="flex  flex-wrap justify-center p-2  mx-4 ">
       {props.content.map((value, key) => {
         return (
           <div
