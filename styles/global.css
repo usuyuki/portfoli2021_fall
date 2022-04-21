@@ -238,7 +238,7 @@ a:hover {
   height: auto;
   object-fit: contain;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 767px) {
   /* スマホ,タブレット */
   main {
     max-width: 100vw;
@@ -253,8 +253,6 @@ a:hover {
   .arrow-rotate {
     transform: rotate(90deg);
   }
-}
-@media screen and (min-width: 599px) and (max-width: 1024px) {
 }
 
 /* フェード系アニメーション */
