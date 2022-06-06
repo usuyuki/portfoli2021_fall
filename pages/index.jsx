@@ -6,7 +6,7 @@ import WorksCards from "../components/cards/worksCards";
 import FeatureWorksCards from "../components/cards/featureWorksCards";
 import BlogCards from "../components/cards/blogCards";
 import SocialIcons from "../components/information/socialIcons";
-import MyComponent from "../components/information/myComponent";
+import ShortDescription from "../components/information/ShortDescription";
 import NormalButton from "../components/button/normalButton";
 import Hr from "../components/decoration/hr";
 import { getBlogsSortedPostsData } from "../lib/WPBlogs";
@@ -69,10 +69,10 @@ export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
           <p className="text-xl mx-4">
             うすゆきと申します。
             <br />
-            ポートフォリオってやつです。
+            ポートフォリオ的なやつです。
           </p>
         </div>
-        <MyComponent />
+        <ShortDescription />
         <div className="lg:mx-auto my-12 px-4 text-center">
           <a
             target="_blank"

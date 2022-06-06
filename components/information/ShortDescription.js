@@ -1,7 +1,7 @@
 /** @format */
 
 import Image from "next/image";
-export default function MyComponent() {
+export default function ShortDescription() {
   return (
     <div className="flex justify-center flex-wrap mx-2 my-12">
       <Image
