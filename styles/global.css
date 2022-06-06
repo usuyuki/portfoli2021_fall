@@ -31,13 +31,32 @@ html {
   scroll-behavior: smooth;
 }
 :root {
+  /*  ベースカラー */
+  /*
+  --u_c_1: #7e937f;
+  --u_c_2: #d7BD57;
+  --u_c_3: #D8E4EE;
+  --u_c_4: #FFF3F3;
+  --u_c_5: #37393D;
+  */
+
   --usuyuki_white: #f4f5f7;
+  --usuyuki_black: #37393d;
+  --u_c_1: #d7bd57;
+  --u_c_2: #f2ee93;
+  --u_c_3: #d8e4ee; /*この色は使ってないので空き枠 */
+  --u_c_4: #bae8bb;
+  --u_c_5: #7e937f;
+
+  /* 旧カラー */
+  /* --usuyuki_white: #f4f5f7;
   --usuyuki_black: #333333;
   --u_c_1: #d9cd47;
   --u_c_2: #f2ee93;
   --u_c_3: #e7f2f6;
   --u_c_4: #9cd9d4;
-  --u_c_5: #126c6d;
+  --u_c_5: #126c6d; */
+
   --swiper-theme-color: var(--u_c_5) !important;
   --swiper-pagination-bullet-inactive-color: var(--u_c_5) !important;
 }
@@ -208,8 +227,11 @@ footer {
   border-top: 2px dotted var(--u_c_1);
 }
 
-a:hover {
-  color: var(--u_c_4);
+.link-item {
+  transition: 0.5s;
+}
+.link-item :hover {
+  color: var(--u_c_5);
   transition: 0.5s;
 }
 
@@ -274,8 +296,8 @@ a:hover {
 }
 .link-button:hover {
   color: var(--u_c_1);
-  background-color: rgba(var(--u_c_2), 0.75);
-  border: 4px dotted var(--u_c_2);
+  background-color: rgba(var(--u_c_5), 0.75);
+  border: 4px dotted var(--u_c_5);
   transition: 0.5s;
 }
 .gitcard {
