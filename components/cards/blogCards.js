@@ -19,7 +19,9 @@ export default function BlogCards(props) {
                     {value.title}
                   </h4>
                 </div>
-                <p className="text-center">{value.date}</p>
+                <p className="text-center">
+                  {value.date.replace(/T\d{2}:\d{2}:\d{2}/, "")}
+                </p>
                 {/* <p className="my-2 mx-8 ">{value.content}</p> */}
               </div>
             </a>
