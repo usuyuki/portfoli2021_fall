@@ -10,6 +10,7 @@ import ShortDescription from "../components/information/ShortDescription";
 import NormalButton from "../components/button/normalButton";
 import Hr from "../components/decoration/hr";
 import { getBlogsSortedPostsData } from "../lib/WPBlogs";
+import { useEffect } from "react";
 
 export const getStaticProps = async () => {
   const [response1, response2, response3] = await Promise.all([
@@ -32,6 +33,11 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
+  useEffect(() => {
+    console.log(
+      "うすゆきポートフォリオのconsoleへようこそ。\n最近ハマっているマンガは「きみが死ぬまで恋をしたい」です✨"
+    );
+  }, []);
   let title_prefix = "ホーム";
   let pageTitle = "usuyuki portfolio";
 
@@ -69,7 +75,7 @@ export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
           <p className="text-xl mx-4">
             うすゆきと申します。
             <br />
-            ポートフォリオ的なやつです。
+            ここはポートフォリオ的なやつです。
           </p>
         </div>
         <ShortDescription />

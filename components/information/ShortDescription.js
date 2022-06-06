@@ -16,7 +16,7 @@ export default function ShortDescription() {
             <span className="material-icons arrow-rotate">arrow_back</span>
           </div>
           <div className="w-11/12">
-            <p>日記のwebアプリ作っています。</p>
+            <p>日記のwebアプリを作っています。</p>
           </div>
         </div>
         <div className="h-2/4 fadeUp delay-time04 flex items-center py-2 justify-center">
@@ -32,7 +32,7 @@ export default function ShortDescription() {
             <span className="material-icons arrow-rotate">arrow_back</span>
           </div>
           <div className="w-11/12">
-            <p>pixivのインターンに行ってきました！</p>
+            <p>ピクシブでアルバイトしています。</p>
           </div>
         </div>
       </div>
