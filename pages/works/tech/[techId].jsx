@@ -27,7 +27,7 @@ export async function getStaticPaths() {
     params: { techId: value },
   }));
 
-  return { paths, fallback: false };
+  return { paths, fallback: true };
 }
 
 export default function Works({ data }) {

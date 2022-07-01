@@ -26,7 +26,7 @@ export async function getStaticPaths() {
   const paths = data.data.map((value) => ({
     params: { productId: value.id },
   }));
-  return { paths, fallback: false };
+  return { paths, fallback: true };
 }
 
 export default function WorksIndividual({ data }) {
