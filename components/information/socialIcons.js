@@ -40,7 +40,7 @@ export default function SocialIcons() {
             <Image
               width={64}
               height={64}
-              src="/img/icons/GitHub-Mark-64px.png"
+              src="/img/icons/GitHub-Mark-128px.png"
             />
           </a>
         </div>
