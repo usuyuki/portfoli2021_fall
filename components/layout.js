@@ -7,6 +7,7 @@ import LeftNav from "./leftNav";
 import Footer from "./footer";
 
 export default function Layout(props) {
+  const pageTitle = `${props.title_prefix} | うすゆきポートフォリオ`;
   return (
     <div>
       <Head>
@@ -15,7 +16,7 @@ export default function Layout(props) {
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
 
         <meta name="description" content="{うすゆきのポートフォリオです。}" />
-        <title>{props.title_prefix} | うすゆきポートフォリオ</title>
+        <title>{pageTitle}</title>
         {/* ogp */}
         <meta property="og:title" content="うすゆきポートフォリオ" />
         <meta

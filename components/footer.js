@@ -6,7 +6,7 @@ export default function Footer(props) {
       <div className="text-right relative -top-4 -left-4">
         <Link href="#pageTop">
           <a className="">
-            <span className="material-icons text-u_c_1 text-xl p-1   rounded-full bg-u_c_2 text-u_c_5">
+            <span className="material-icons  text-xl p-1   rounded-full bg-u_c_2 text-u_c_5">
               arrow_upward
             </span>
           </a>
