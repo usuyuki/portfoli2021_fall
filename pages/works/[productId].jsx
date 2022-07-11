@@ -1,7 +1,6 @@
 /** @format */
 
 import Layout from "../../components/layout";
-import removeHTMLTag from "../../lib/removeHTMLTag";
 import Image from "next/image";
 import styles from "../../styles/individualWorks.module.css";
 import Heading1 from "../../components/decoration/heading1";
@@ -26,7 +25,7 @@ export async function getStaticPaths() {
   const paths = data.data.map((value) => ({
     params: { productId: value.id },
   }));
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 }
 
 export default function WorksIndividual({ data }) {
