@@ -2,7 +2,6 @@
 import Layout from "../../../components/layout";
 import WorksCards from "../../../components/cards/worksCards";
 import changeUidToName from "../../../lib/changeUidToName";
-import Link from "next/link";
 // レンダリング前に実行される
 export const getStaticProps = async ({ params }) => {
   const data = await fetch(

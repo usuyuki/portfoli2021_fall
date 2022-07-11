@@ -1,7 +1,6 @@
 /** @format */
 
 import Layout from "../../components/layout";
-import removeHTMLTag from "../../lib/removeHTMLTag";
 import Image from "next/image";
 import styles from "../../styles/individualWorks.module.css";
 import Heading1 from "../../components/decoration/heading1";

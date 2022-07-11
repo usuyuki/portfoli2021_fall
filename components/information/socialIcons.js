@@ -37,11 +37,7 @@ export default function SocialIcons() {
             rel="noopener noreferrer"
             href="https://github.com/Usuyuki"
           >
-            <Image
-              width={64}
-              height={64}
-              src="/img/icons/GitHub-Mark-64px.png"
-            />
+            <Image width={64} height={64} src="/img/icons/GitHub.png" />
           </a>
         </div>
         {/* Youtube */}
