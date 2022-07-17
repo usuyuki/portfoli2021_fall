@@ -31,6 +31,11 @@ export default function Presentations({ data }) {
     <div>
       <Layout title_prefix={title_prefix} pageTitle={pageTitle}>
         <div className="">
+          <h2 className="text-center mx-4 my-4">
+            公開できる資料のみを挙げています。
+            <br />
+            登壇時に含まれていた個人情報などを削除しているため、実際の資料と異なる場合があります。
+          </h2>
           <PresentationsCard
             content={data}
             image_urls={image_urls}
