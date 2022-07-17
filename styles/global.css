@@ -416,3 +416,11 @@ https://github.com/lukehaas/css-loaders/blob/step2/LICENSE */
     height: 5em;
   }
 }
+.site-explain-card-a {
+  transition: 0.5s;
+}
+.site-explain-card-a:hover {
+  color: var(--u_c_2);
+  background-color: var(--u_c_5);
+  transition: 0.5s;
+}
