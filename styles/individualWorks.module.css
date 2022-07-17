@@ -14,6 +14,11 @@
   word-break: break-word;
 }
 
+.fit_iframe iframe {
+  width: 1120px !important;
+  /* アスペクト比16:9で維持↓ */
+  height: calc((9 * 1120px) / 16) !important;
+}
 .works_description {
   width: 50vw;
   margin: 2em auto;
@@ -56,5 +61,10 @@
   .thumbnail img {
     margin: 10px auto;
     margin-top: 0px;
+  }
+  .fit_iframe iframe {
+    width: 80vw !important;
+    /* アスペクト比16:9で維持↓ */
+    height: calc((9 * 80vw) / 16) !important;
   }
 }
