@@ -16,7 +16,7 @@ export default function LeftNav(props) {
       {/* メニュー */}
       <div className={styles.portfolio_menu}>
         <div className={styles.leftNav_line}></div>
-        <nav className="flex flex-col text-xl text-u_c_5 mt-4 ">
+        <nav className="flex flex-col text-xl mt-4 ">
           <Link href="/">
             <a className="my-2">Home</a>
           </Link>
@@ -54,6 +54,9 @@ export default function LeftNav(props) {
               <a className="">マイコン</a>
             </Link>
           </div>
+          <Link href="/blogs">
+            <a className="my-2">Blogs</a>
+          </Link>
           <Link href="/presentations">
             <a className="my-2">Slides</a>
           </Link>
