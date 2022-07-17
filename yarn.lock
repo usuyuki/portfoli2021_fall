@@ -119,6 +119,11 @@ acorn@^7.0.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
   integrity sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
 
+address-cream@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/address-cream/-/address-cream-0.1.2.tgz#a75a3a95e21967adf48b1f16032a3595c3cc8952"
+  integrity sha512-BMJ86Ayd3a69Q7wRXlE01ouc4PWz2rWgkSbD8SyQbNr8Ja19IFqxH8F8Y7Nfs0kLaoK//fEFv5ZhKIeQw0rIoA==
+
 anymatch@~3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/anymatch/-/anymatch-3.1.2.tgz#c0557c096af32f106198f4f4e2a383537e378716"
