@@ -54,11 +54,11 @@ export default function LeftNav(props) {
               <a className="">マイコン</a>
             </Link>
           </div>
-          <Link href="/links">
-            <a className="my-2">Links</a>
-          </Link>
           <Link href="/presentations">
             <a className="my-2">Slides</a>
+          </Link>
+          <Link href="/links">
+            <a className="my-2">Links</a>
           </Link>
         </nav>
       </div>
