@@ -30,7 +30,7 @@ export async function getStaticPaths() {
 
 export default function WorksIndividual({ data }) {
   let title_prefix = data.data.attributes.title;
-  let pageTitle = "works";
+  let pageTitle = "Works";
 
   let image_thumbnail = "";
   let work_scale = "";
