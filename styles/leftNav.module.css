@@ -2,12 +2,13 @@
 .leftNav_line {
   background-color: var(--u_c_5);
   width: 4px;
-  height: 460px;
+  height: 500px;
   margin-right: 10px;
   border-radius: 4px;
 }
 
 .portfolio_menu {
+  color: var(--usuyuki_black);
   width: 170px;
   display: flex;
   position: fixed;
@@ -43,7 +44,7 @@
     opacity: 0;
     margin: 0 0;
     pointer-events: none;
-    background-color: rgba(244, 245, 247, 0.7);
+    background-color: rgba(186, 232, 187, 0.7);
     border-radius: 0 0 10px 0;
   }
 
@@ -58,7 +59,7 @@
     transition: 0.5s;
   }
   .nav_button_hidden {
-    width: 180px;
+    width: 170px;
     transform: translateX(-00px);
     display: none;
   }
@@ -66,9 +67,9 @@
     font-family: "Material Icons";
     content: "chevron_right";
     font-size: 32px;
-    color: var(--u_c_5);
+    color: var(--u_c_2);
     /* 薄めの背景 */
-    background-color: var(--u_c_2);
+    background-color: var(--u_c_5);
     border-radius: 50%;
   }
 

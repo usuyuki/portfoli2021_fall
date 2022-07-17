@@ -11,6 +11,7 @@ import NormalButton from "../components/button/normalButton";
 import Hr from "../components/decoration/hr";
 import { getBlogsSortedPostsData } from "../lib/WPBlogs";
 import { useEffect } from "react";
+import addressCream from "address-cream";
 
 export const getStaticProps = async () => {
   const [response1, response2, response3] = await Promise.all([
@@ -36,6 +37,18 @@ export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
   useEffect(() => {
     console.log(
       "うすゆきポートフォリオのconsoleへようこそ。\n最近ハマっているマンガは「きみが死ぬまで恋をしたい」です✨"
+    );
+    // addressCream.flow(
+    //   "うすゆきポートフォリオへようこそ。技術的負債なコードで動いています。",
+    //   0.3,
+    //   15
+    // );
+    addressCream.constant(
+      "うすゆきポートフォリオへようこそ",
+      0.2,
+      "✨",
+      "☕",
+      0.5
     );
   }, []);
   let title_prefix = "ホーム";
