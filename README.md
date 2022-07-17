@@ -2,7 +2,7 @@
 
 # 4 代目うすゆきポートフォリオ
 
-https://pf.usuyuki.net/
+https://pf.usuyuki.net
 
 ## フロントエンド
 
