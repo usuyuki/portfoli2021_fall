@@ -43,13 +43,7 @@ export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
     //   0.3,
     //   15
     // );
-    addressCream.constant(
-      "うすゆきどっとねっとへようこそ",
-      0.2,
-      "✨",
-      "☕",
-      0.5
-    );
+    addressCream.constant("うすゆきどっとねっとへようこそ✨🥕☔🦩☕", 0.2);
   }, []);
   let title_prefix = "ホーム";
   let pageTitle = "usuyuki dot net";
