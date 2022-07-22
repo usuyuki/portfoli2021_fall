@@ -7,7 +7,7 @@ import LeftNav from "./leftNav";
 import Footer from "./footer";
 
 export default function Layout(props) {
-  const pageTitle = `${props.title_prefix} | うすゆきポートフォリオ`;
+  const pageTitle = `${props.title_prefix} | うすゆきどっとねっと`;
   return (
     <div>
       <Head>
@@ -18,17 +18,14 @@ export default function Layout(props) {
         <meta name="description" content="{うすゆきのポートフォリオです。}" />
         <title>{pageTitle}</title>
         {/* ogp */}
-        <meta property="og:title" content="うすゆきポートフォリオ" />
+        <meta property="og:title" content="うすゆきどっとねっと" />
         <meta
           property="og:description"
           content="うすゆきのポートフォリオです。"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://pf.usuyuki.net/" />
-        <meta
-          property="og:image"
-          content="https://pf.usuyuki.net//img/ogp.png"
-        />
+        <meta property="og:url" content="https://usuyuki.net/" />
+        <meta property="og:image" content="https://usuyuki.net//img/ogp.png" />
         {/* <meta property="fb:app_id"      content="" /> */}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@usuyuki26" />
