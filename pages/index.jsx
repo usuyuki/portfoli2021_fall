@@ -36,7 +36,7 @@ export const getStaticProps = async () => {
 export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
   useEffect(() => {
     console.log(
-      "うすゆきポートフォリオのconsoleへようこそ。\n最近ハマっているマンガは「きみが死ぬまで恋をしたい」です✨"
+      "うすゆきどっとねっとのconsoleへようこそ。\n最近ハマっているマンガは「きみが死ぬまで恋をしたい」です✨"
     );
     // addressCream.flow(
     //   "うすゆきポートフォリオへようこそ。技術的負債なコードで動いています。",
@@ -44,7 +44,7 @@ export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
     //   15
     // );
     addressCream.constant(
-      "うすゆきポートフォリオへようこそ",
+      "うすゆきどっとねっとへようこそ",
       0.2,
       "✨",
       "☕",
@@ -52,7 +52,7 @@ export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
     );
   }, []);
   let title_prefix = "ホーム";
-  let pageTitle = "usuyuki portfolio";
+  let pageTitle = "usuyuki dot net";
 
   let image_urls = []; //urlの配列
   let image_urls_featured = []; //urlの配列
@@ -86,7 +86,7 @@ export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
         <p className="text-center text-3xl mt-24 mb-4 mx-4">ごあいさつ</p>
         <div className="flex  justify-center">
           <p className="text-xl mx-4">
-            うすゆきと申します。
+            うすゆどっとねっとへようこそ。
             <br />
             ここはポートフォリオ的なやつです。
           </p>
