@@ -14,11 +14,17 @@ export default function TimelineLayout(props) {
                 <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-u_c_2 shadow"></div>
               </div>
               <div className="bg-u_c_2 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
-                <h3 className="font-semibold text-lg mb-1">{value[0]}</h3>
-                <h3 className="font-semibold text-lg mb-1">{value[1]}</h3>
-                <p className="leading-tight text-justify break-all">
-                  {removeHTMLTag(value[2])}
-                </p>
+                <h3 className="font-semibold text-lg mb-1">
+                  {value[0]}
+                  {value[1] === null ? "" : " ~ " + value[1]}
+                </h3>
+                <h3 className="font-semibold text-lg mb-1">{value[2]}</h3>
+                <div
+                  className="leading-tight text-justify break-all"
+                  dangerouslySetInnerHTML={{
+                    __html: value[3],
+                  }}
+                />
               </div>
             </div>
           );

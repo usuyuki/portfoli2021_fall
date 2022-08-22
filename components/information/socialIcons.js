@@ -54,7 +54,7 @@ export default function SocialIcons() {
             />
           </a>
         </div>
-        {/* ブログ */}
+        {/* blog.usuyuki.net */}
         <div className="w-16 h-auto p-4">
           <a
             target="_blank"
@@ -65,6 +65,20 @@ export default function SocialIcons() {
               width={64}
               height={64}
               src="/img/icons/usuyukiBlog-icon.png"
+            />
+          </a>
+        </div>
+        {/* neo.usuyuki.net */}
+        <div className="w-16 h-auto p-4">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://neo.usuyuki.net/"
+          >
+            <Image
+              width={64}
+              height={64}
+              src="/img/icons/neousuyukinet-icon.png"
             />
           </a>
         </div>

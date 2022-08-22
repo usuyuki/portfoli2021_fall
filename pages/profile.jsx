@@ -74,6 +74,7 @@ export default function Home({ history, tech_stack, hobby }) {
       case "その他":
         value_sortedBy_genreHI["その他"].push([
           value.attributes.field_history_date,
+          value.attributes.field_history_end_date,
           value.attributes.title,
           value.attributes.body != null ? value.attributes.body.value : "",
           history_genre_names[
@@ -85,6 +86,7 @@ export default function Home({ history, tech_stack, hobby }) {
       case "仕事":
         value_sortedBy_genreHI["仕事"].push([
           value.attributes.field_history_date,
+          value.attributes.field_history_end_date,
           value.attributes.title,
           value.attributes.body != null ? value.attributes.body.value : "",
           history_genre_names[
@@ -95,6 +97,7 @@ export default function Home({ history, tech_stack, hobby }) {
       case "団体":
         value_sortedBy_genreHI["団体"].push([
           value.attributes.field_history_date,
+          value.attributes.field_history_end_date,
           value.attributes.title,
           value.attributes.body != null ? value.attributes.body.value : "",
           history_genre_names[
@@ -105,6 +108,7 @@ export default function Home({ history, tech_stack, hobby }) {
       case "資格":
         value_sortedBy_genreHI["資格"].push([
           value.attributes.field_history_date,
+          value.attributes.field_history_end_date,
           value.attributes.title,
           value.attributes.body != null ? value.attributes.body.value : "",
           history_genre_names[
@@ -115,6 +119,7 @@ export default function Home({ history, tech_stack, hobby }) {
       case "学業":
         value_sortedBy_genreHI["学業"].push([
           value.attributes.field_history_date,
+          value.attributes.field_history_end_date,
           value.attributes.title,
           value.attributes.body != null ? value.attributes.body.value : "",
           history_genre_names[
@@ -125,6 +130,7 @@ export default function Home({ history, tech_stack, hobby }) {
       case "コンテスト":
         value_sortedBy_genreHI["コンテスト"].push([
           value.attributes.field_history_date,
+          value.attributes.field_history_end_date,
           value.attributes.title,
           value.attributes.body != null ? value.attributes.body.value : "",
           history_genre_names[
