@@ -11,7 +11,7 @@ export default function SocialIcons() {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://misskey.usuyuki.net/@usuyuki"
+            href="https://m5y.usuyuki.net/@usuyuki"
           >
             <Image width={384} height={384} src="/img/icons/misskey.png" />
           </a>
