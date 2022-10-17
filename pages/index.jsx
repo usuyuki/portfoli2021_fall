@@ -10,7 +10,7 @@ import ShortDescription from "../components/information/ShortDescription";
 import NormalButton from "../components/button/normalButton";
 import Hr from "../components/decoration/hr";
 import { getBlogsSortedPostsData } from "../lib/WPBlogs";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import addressCream from "address-cream";
 
 export const getStaticProps = async () => {
@@ -34,17 +34,27 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
+  const [isClient, setClient] = useState(false);
   useEffect(() => {
+    setClient(true);
+  }, []);
+
+  if (isClient) {
+    /** @todo これなんとかしたい(意図としてはhomeに戻ると同じconsole出力されてしまう都合) */
+    console.clear();
     console.log(
       "うすゆきどっとねっとのconsoleへようこそ。\n最近ハマっているマンガは「きみが死ぬまで恋をしたい」です✨"
+    );
+    console.log(
+      "アドレスバーの絵文字は推しVTuberを表す絵文字だったりします。\n🔼このアドレスバーの動くやつ、独自ライブラリで動いてるんですよ！(ポンコツ挙動しますがね……)"
     );
     // addressCream.flow(
     //   "うすゆきポートフォリオへようこそ。技術的負債なコードで動いています。",
     //   0.3,
     //   15
     // );
-    addressCream.constant("うすゆきどっとねっとへようこそ✨🥕☔🦩☕", 0.2);
-  }, []);
+    addressCream.constant("うすゆきどっとねっとへようこそ☔🥕🍆💞🦩", 0.2);
+  }
   let title_prefix = "ホーム";
   let pageTitle = "usuyuki dot net";
 
