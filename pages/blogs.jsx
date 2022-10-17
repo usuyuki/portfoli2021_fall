@@ -20,12 +20,12 @@ export default function Blogs({}) {
           <SiteExplainCard
             title="うすゆきブログ"
             url="https://blog.usuyuki.net"
-            description="雑多な書き物置き場"
+            description="雑多な書き物"
           />
           <SiteExplainCard
             title="neo.usuyuki.net"
             url="https://neo.usuyuki.net"
-            description="シンプルで洒落たエッセイを目指した書き物"
+            description="xiupos.netに憧れて作った書き物"
           />
         </div>
         <Heading2 title="技術情報共有サービス系" icon="language" />
@@ -38,13 +38,21 @@ export default function Blogs({}) {
           <SiteExplainCard
             title="Qiita"
             url="https://qiita.com/Usuyuki"
-            description="備忘録中心"
+            description="備忘録中心の書き物"
           />
         </div>
-        <Heading2 title="いにしえ" icon="topic" />
+        <Heading2 title="その他" icon="topic" />
         <div className="flex justify-center flex-wrap">
           <SiteExplainCard
-            title="Note"
+            title="かどでプロジェクト公式note"
+            url="https://note.com/kadoday"
+            description="趣味で開発している「かどで日記」にまつわる書き物"
+          />
+        </div>
+        <Heading2 title="いにしえ" icon="history_toggle_off" />
+        <div className="flex justify-center flex-wrap">
+          <SiteExplainCard
+            title="note"
             url="https://note.com/usuyuki26"
             description="大学1年生の時の自ブログを始める前の書き物"
           />
