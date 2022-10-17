@@ -4,6 +4,9 @@
 
 https://usuyuki.net
 
+**型のないコードのオンパレードで遊び心にも欠けるので早くリプレースしたい……**  
+といいつつも、1 年近くお世話になっています。
+
 ## フロントエンド
 
 Next.js
@@ -17,7 +20,7 @@ Drupal
 ローカルサーバー
 
 ```
-npm run dev
+yarn dev
 ```
 
 package.json で使用していない package を消す
@@ -29,7 +32,7 @@ npx depcheck
 更新
 
 ```
-npm update
+yarn upgrade
 ```
 
 ## 最適化
