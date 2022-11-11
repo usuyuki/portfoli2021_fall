@@ -186,11 +186,11 @@ footer {
   /* サイズ揃える */
   object-fit: cover;
   border-radius: 40% 70% 50% 30%/50%;
-  filter: grayscale(100%);
+  filter: grayscale(0%);
   margin: 0 auto;
 }
 .top-image img:hover {
-  filter: grayscale(0%);
+  filter: grayscale(100%);
   transition: 0.5s;
 }
 
@@ -216,7 +216,7 @@ footer {
   width: 150px;
   height: 150px;
   object-fit: cover;
-
+  margin: 0 auto;
   border-radius: 20px;
 }
 .link-button {
@@ -244,9 +244,6 @@ footer {
   main {
     max-width: 100vw;
     min-width: 100vw;
-  }
-  .top-image img {
-    filter: grayscale(0%);
   }
   .feature-image {
     text-align: center;

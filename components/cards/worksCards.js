@@ -12,22 +12,20 @@ export default function WorksCards(props) {
             key={key}
           >
             <Link href={"/works/" + value.id}>
-              <a>
-                <div key={(counter_for_meta += 1)}>
-                  <div className="top-image ">
-                    <Image
-                      width={150}
-                      height={150}
-                      src={props.image_urls[counter_for_meta]}
-                    />
-                  </div>
-                  <div className="flex justify-center">
-                    <h4 className="my-2 px-4 text-2xl break-all">
-                      {value.attributes.title}
-                    </h4>
-                  </div>
+              <div key={(counter_for_meta += 1)}>
+                <div className="top-image">
+                  <Image
+                    width={150}
+                    height={150}
+                    src={props.image_urls[counter_for_meta]}
+                  />
                 </div>
-              </a>
+                <div className="flex justify-center">
+                  <h4 className="my-2 px-4 text-2xl break-all">
+                    {value.attributes.title}
+                  </h4>
+                </div>
+              </div>
             </Link>
             <div className="flex justify-center mt-4">
               <p className="genre-tag">
@@ -37,13 +35,11 @@ export default function WorksCards(props) {
                     value.relationships.field_works_genre.data[0].id
                   }
                 >
-                  <a>
-                    {
-                      props.genre_names[
-                        value.relationships.field_works_genre.data[0].id
-                      ]
-                    }
-                  </a>
+                  {
+                    props.genre_names[
+                      value.relationships.field_works_genre.data[0].id
+                    ]
+                  }
                 </Link>
               </p>
             </div>

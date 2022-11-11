@@ -12,22 +12,20 @@ export default function PresentationsCard(props) {
             key={key}
           >
             <Link href={"/presentations/" + value.id}>
-              <a>
-                <div key={(counter_for_meta += 1)}>
-                  <div className="archive-thumbnail">
-                    <Image
-                      width={150}
-                      height={150}
-                      src={props.image_urls[counter_for_meta]}
-                    />
-                  </div>
-                  <div className="flex justify-center">
-                    <h4 className="my-2 px-4 text-2xl break-all">
-                      {value.attributes.title}
-                    </h4>
-                  </div>
+              <div key={(counter_for_meta += 1)}>
+                <div className="archive-thumbnail">
+                  <Image
+                    width={150}
+                    height={150}
+                    src={props.image_urls[counter_for_meta]}
+                  />
                 </div>
-              </a>
+                <div className="flex justify-center">
+                  <h4 className="my-2 px-4 text-2xl break-all">
+                    {value.attributes.title}
+                  </h4>
+                </div>
+              </div>
             </Link>
             <div className="flex justify-center mt-4">
               <p className="genre-tag">
@@ -37,13 +35,11 @@ export default function PresentationsCard(props) {
                     value.relationships.field_presentation_genre.data.id
                   }
                 >
-                  <a>
-                    {
-                      props.genre_names[
-                        value.relationships.field_presentation_genre.data.id
-                      ]
-                    }
-                  </a>
+                  {
+                    props.genre_names[
+                      value.relationships.field_presentation_genre.data.id
+                    ]
+                  }
                 </Link>
               </p>
             </div>
