@@ -101,9 +101,10 @@ export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/Usuyuki"
+            class="img-center"
           >
             <Image
-              width={870}
+              width={670}
               height={155}
               src="https://grass-graph.appspot.com/images/Usuyuki.png"
             />

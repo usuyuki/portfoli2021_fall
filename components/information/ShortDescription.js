@@ -5,33 +5,33 @@ export default function ShortDescription() {
   return (
     <div className="flex justify-center flex-wrap mx-2 my-12">
       <Image
-        className="w-full lg:w-1/2 fadeUp"
+        className="fadeUp"
         width={400}
         height={400}
-        src="/img/illust/simplePersonPict.svg"
+        src="/img/illust/acrylickeyholderUsuyuki.png"
       />
-      <div className="w-full lg:w-1/2 ">
-        <div className="h-1/4 fadeUp delay-time02 flex items-center py-2 justify-center">
-          <div className="w-1/12 ">
-            <span className="material-icons arrow-rotate">arrow_back</span>
+      <div className="w-full flex flex-col justify-center">
+        <div className="fadeUp delay-time02 flex items-center py-2 justify-center">
+          <div className="">
+            <span className="material-icons">arrow_upward</span>
           </div>
-          <div className="w-11/12">
+          <div className="">
             <p>日記のwebアプリを作っています。</p>
           </div>
         </div>
         <div className="h-2/4 fadeUp delay-time04 flex items-center py-2 justify-center">
-          <div className="w-1/12 ">
-            <span className="material-icons arrow-rotate">arrow_back</span>
+          <div className="">
+            <span className="material-icons">arrow_upward</span>
           </div>
-          <div className="w-11/12">
+          <div className="">
             <p>VRChatを楽しんでいます。</p>
           </div>
         </div>
-        <div className="h-1/4 fadeUp delay-time06 flex items-center py-2 justify-center">
-          <div className="w-1/12 ">
-            <span className="material-icons arrow-rotate">arrow_back</span>
+        <div className="fadeUp delay-time06 flex items-center py-2 justify-center">
+          <div className="">
+            <span className="material-icons">arrow_upward</span>
           </div>
-          <div className="w-11/12">
+          <div className="">
             <p>ピクシブでアルバイトしています。</p>
           </div>
         </div>
