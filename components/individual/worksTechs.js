@@ -6,13 +6,11 @@ export default function WorksTechs(props) {
       <div className="">
         {Object.keys(props.tech_names).map((key) => {
           return (
-            <Link href={`/works/tech/${key}`} key={key}>
-              <a className="block">
-                <p className="lg:mx-4 mb-6 text-xl text-u_c_1 ">
-                  <span className="material-icons">local_offer</span>
-                  {props.tech_names[key]}
-                </p>
-              </a>
+            <Link className="block" href={`/works/tech/${key}`} key={key}>
+              <p className="lg:mx-4 mb-6 text-xl text-u_c_1 ">
+                <span className="material-icons">local_offer</span>
+                {props.tech_names[key]}
+              </p>
             </Link>
           );
         })}

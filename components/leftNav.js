@@ -17,51 +17,41 @@ export default function LeftNav(props) {
       <div className={styles.portfolio_menu}>
         <div className={styles.leftNav_line}></div>
         <nav className="flex flex-col text-xl mt-4 ">
-          <Link href="/">
-            <a className="my-2">Home</a>
+          <Link className="my-2" href="/">
+            Home
           </Link>
-          <Link href="/profile">
-            <a className="my-2">Profile</a>
+          <Link className="my-2" href="/profile">
+            Profile
           </Link>
           <div className="flex flex-col text-lg ml-4">
-            <Link href="/profile#info">
-              <a className="">情報</a>
-            </Link>
-            <Link href="/profile#like">
-              <a className="">好み</a>
-            </Link>
-            <Link href="/profile#history">
-              <a className="">経歴</a>
-            </Link>
-            <Link href="/profile#tech">
-              <a className="">技術</a>
-            </Link>
-            <Link href="/profile#hobby">
-              <a className="">趣味</a>
-            </Link>
+            <Link href="/profile#info">情報</Link>
+            <Link href="/profile#like">好み</Link>
+            <Link href="/profile#history">経歴</Link>
+            <Link href="/profile#tech">技術</Link>
+            <Link href="/profile#hobby">趣味</Link>
           </div>
-          <Link href="/works">
-            <a className="my-2">Works</a>
+          <Link className="my-2" href="/works">
+            Works
           </Link>
           <div className="flex flex-col text-lg ml-4">
             <Link href="/works/genre/91dafdb4-e3b7-4993-960a-b388eec2185e">
-              <a className="">web</a>
+              web
             </Link>
             <Link href="/works/genre/e9fc047c-4c12-4ce0-a2a2-45d6d900153a">
-              <a className="">映像制作</a>
+              映像制作
             </Link>
             <Link href="/works/genre/e96bb5b5-a9a5-457a-a45b-cfcfd0840ab0">
-              <a className="">マイコン</a>
+              マイコン
             </Link>
           </div>
-          <Link href="/blogs">
-            <a className="my-2">Blogs</a>
+          <Link className="my-2" href="/blogs">
+            Blogs
           </Link>
-          <Link href="/presentations">
-            <a className="my-2">Slides</a>
+          <Link className="my-2" href="/presentations">
+            Slides
           </Link>
-          <Link href="/links">
-            <a className="my-2">Links</a>
+          <Link className="my-2" href="/links">
+            Links
           </Link>
         </nav>
       </div>
