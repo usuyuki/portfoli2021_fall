@@ -19,7 +19,8 @@ export default function Links({ data }) {
   return (
     <div>
       <Layout title_prefix={title_prefix} pageTitle={pageTitle}>
-        <div className="flex flex-wrap">
+        <h2 className="text-center mx-4 my-4 text-xl">リンク置き場</h2>
+        <div className="flex flex-wrap justify-center">
           {data != undefined
             ? data.data.map((value, key) => (
                 <div className="link-item m-12" key={key}>

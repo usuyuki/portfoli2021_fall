@@ -13,7 +13,7 @@ export default function WorksCards(props) {
           >
             <Link href={"/works/" + value.id}>
               <div key={(counter_for_meta += 1)}>
-                <div className="top-image ">
+                <div className="top-image">
                   <Image
                     width={150}
                     height={150}
