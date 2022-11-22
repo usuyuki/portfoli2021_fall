@@ -102,14 +102,18 @@ export default function SocialIcons() {
             <Image width={64} height={64} src="/img/icons/Zenn.svg" />
           </a>
         </div>
-        {/* どくめ */}
+        {/* keybase */}
         <div className="w-16 h-auto p-4">
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://bookmeter.com/users/1141982"
+            href="https://keybase.io/usuyuki"
           >
-            <Image width={64} height={64} src="/img/icons/dokumeFuu.png" />
+            <Image
+              width={64}
+              height={64}
+              src="/img/icons/keybase-official.svg"
+            />
           </a>
         </div>
 

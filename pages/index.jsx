@@ -101,7 +101,7 @@ export default function Home({ latestWorks, featuredWorks, allBlogsData }) {
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/Usuyuki"
-            class="img-center"
+            className="img-center"
           >
             <Image
               width={670}
