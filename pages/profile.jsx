@@ -251,11 +251,9 @@ export default function Home({ history, tech_stack, hobby }) {
               好きな食べ物:コンペイトウ、ポップコーン
             </p>
             <p className="my-4 md:my-0">好きな飲み物:コーヒー</p>
-            <p className="my-4 md:my-0">推し:しぐれうい</p>
-            <p className="my-4 md:my-0">
-              好きな駅メロ:JR-SH5(東京駅3番線 京浜東北 北行 ホーム)
-            </p>
+            <p className="my-4 md:my-0">好きなキーバインド:Vim</p>
             <p className="my-4 md:my-0">好きなSNS:Misskey</p>
+            <p className="my-4 md:my-0">推し:しぐれうい</p>
           </AboutMeFrame>
         </div>
         <div className="" id="history">
