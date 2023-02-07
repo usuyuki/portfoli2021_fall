@@ -227,7 +227,7 @@ export default function Home({ history, tech_stack, hobby }) {
           </div>
           <h2 className="text-center my-4 mx-4 text-3xl">うすゆき</h2>
           <AboutMeFrame icon="face">
-            <p className="my-4 md:my-0">Age:20</p>
+            <p className="my-4 md:my-0">Age:21</p>
             <p className="my-4 md:my-0">Utsunomiya University</p>
             <p className="my-4 md:my-0">Grade:B3</p>
             <p className="my-4 md:my-0">Major:Information science</p>
